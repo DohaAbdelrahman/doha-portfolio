@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background Image */}
-       <div className="mt-8 md:mt-0 md:ml-10">
+      <div className="absolute inset-0 z-0">
         <img
           src="https://i.postimg.cc/gjK4CDKR/aiease-1751820057925.jpg"
-          alt="Doha Illustration"
-          className="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-white"
+          alt="Programming workspace"
+          className="w-full h-full object-cover opacity-20"
         />
+        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
       </div>
 
       {/* Floating Elements */}
@@ -77,7 +77,7 @@ const Hero = () => {
               {/* أزرار GitHub و LinkedIn على شكل دائري وتحت */}
               <div className="flex gap-4 justify-center">
                 <button
-                  className="w-12 h-12 rounded-full purple-600  text-white flex items-center justify-center hover:purple-600 transition-all"
+                  className="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center hover:bg-purple-700 transition-all"
                   onClick={() => window.open("https://linkedin.com/in/doha-abdelrahman-3540292a5", "_blank")}
                 >
                   {/* LinkedIn أيقونة */}
@@ -99,26 +99,23 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image Section */}
+          {/* Image Section with Real Photo */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-80 h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute inset-4 bg-gradient-card rounded-full border-2 border-primary/30 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">Profile Photo</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Add your photo here</p>
-                </div>
+                <img
+                  src="https://i.postimg.cc/3RPGcP43/my-profile.jpg" // 🔁 غيري للرابط أو import لو محلية
+                  alt="Doha's profile"
+                  className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg border-4 border-white"
+                />
               </div>
             </div>
           </div>
         </div>
 
-        
-
         {/* Scroll Indicator */}
-        <div className="animate-bounce">
+        <div className="animate-bounce mt-8">
           <ArrowDown className="h-6 w-6 mx-auto text-muted-foreground" />
         </div>
       </div>
