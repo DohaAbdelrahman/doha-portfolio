@@ -49,25 +49,54 @@ const Hero = () => {
           />
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all duration-300"
-            onClick={() => window.location.href = "mailto:your@email.com"}
-          >
-            <Mail className="mr-2 h-4 w-4" />
-              Get In Touch
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
-            onClick={() => window.open(" https://drive.google.com/file/d/1pP6CoZjq1oCSpuOwrjoZcuok6A3voY0D/view?usp=sharing", "_blank")}
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </Button>
-        </div>
+        <div className="flex flex-col items-center gap-6 mb-12">
+  {/* الأزرار الأساسية */}
+  <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+    <Button
+      size="lg"
+      className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all duration-300"
+      onClick={() => window.location.href = "mailto:your@email.com"}
+    >
+      <Mail className="mr-2 h-4 w-4" />
+      Get In Touch
+    </Button>
+
+    <Button
+      variant="outline"
+      size="lg"
+      className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
+      onClick={() => window.open("https://drive.google.com/file/d/1pP6CoZjq1oCSpuOwrjoZcuok6A3voY0D/view?usp=sharing", "_blank")}
+    >
+      <Download className="mr-2 h-4 w-4" />
+      Download CV
+    </Button>
+  </div>
+
+  {/* أزرار GitHub و LinkedIn على شكل دائري وتحت */}
+  <div className="flex gap-4 justify-center">
+    <button
+      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-all"
+      onClick={() => window.open("https://www.linkedin.com/in/yourusername", "_blank")}
+    >
+      {/* LinkedIn أيقونة */}
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H13v2.25h.09c.77-1.47 2.65-3 5.41-3 5.79 0 6.86 3.82 6.86 8.79V24h-5V15.5c0-2.02-.04-4.62-3.05-4.62-3.05 0-3.52 2.24-3.52 4.47V24H7.5V8z"/>
+      </svg>
+    </button>
+
+    <button
+      className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-900 transition-all"
+      onClick={() => window.open("https://github.com/yourusername", "_blank")}
+    >
+      {/* GitHub أيقونة */}
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.29 9.44 7.86 10.98.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.72 1.26 3.38.96.1-.75.41-1.26.75-1.55-2.55-.3-5.23-1.28-5.23-5.7 0-1.26.45-2.28 1.19-3.08-.12-.3-.52-1.53.11-3.19 0 0 .97-.31 3.18 1.18a11 11 0 012.9-.39c.98 0 1.98.13 2.9.39 2.21-1.49 3.17-1.18 3.17-1.18.64 1.66.24 2.89.12 3.19.74.8 1.18 1.82 1.18 3.08 0 4.43-2.68 5.4-5.24 5.69.42.37.8 1.1.8 2.22v3.29c0 .31.21.66.8.55A10.53 10.53 0 0023.5 12C23.5 5.73 18.27.5 12 .5z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        
 
         {/* Scroll Indicator */}
         <div className="animate-bounce">
