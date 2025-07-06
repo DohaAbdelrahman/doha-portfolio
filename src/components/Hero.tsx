@@ -105,7 +105,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute inset-4 bg-gradient-card rounded-full border-2 border-primary/30 flex items-center justify-center">
                 <img
-                  src="https://i.postimg.cc/3RPGcP43/my-profile.jpg" // 🔁 غيري للرابط أو import لو محلية
+                  src="https://i.postimg.cc/bvtBr1TD/Whats-App-Image-2025-06-22-at-16-25-05-6d9fe2ba.jpg" // 🔁 غيري للرابط أو import لو محلية
                   alt="Doha's profile"
                   className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg border-4 border-white"
                 />
