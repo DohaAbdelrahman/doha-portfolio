@@ -62,7 +62,7 @@ const Hero = () => {
         variant="outline"
         size="lg"
         className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
-        onClick={() => window.open("/cv.pdf", "_blank")}
+        onClick={() => window.open("C:/Users/Doha/Downloads/CV.DohaAbdelrahman.pdf")}
       >
         <Download className="mr-2 h-4 w-4" />
         Download CV
