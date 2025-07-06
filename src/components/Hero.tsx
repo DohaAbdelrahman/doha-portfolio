@@ -29,21 +29,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold text-sky-800 mb-6">
-          Hi, I'm{' '}
-          <span className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-            <TypeAnimation
-              sequence={[
-                'Doha Abdelrahman',
-                1000,
-                '',
-                500,
-              ]}
-              speed={80}
-              repeat={Infinity}
-              cursor={true}
-            />
-          </span>
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+          Doha Abdelrahman
         </h1>
 
         <p className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
