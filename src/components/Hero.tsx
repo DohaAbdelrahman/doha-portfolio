@@ -75,8 +75,8 @@ const Hero = () => {
   {/* أزرار GitHub و LinkedIn على شكل دائري وتحت */}
   <div className="flex gap-4 justify-center">
     <button
-      className="w-12 h-12 rounded-full purple-600  text-white flex items-center justify-center hover:bg-blue-700 transition-all"
-      onClick={() => window.open("https://www.linkedin.com/in/yourusername", "_blank")}
+      className="w-12 h-12 rounded-full purple-600  text-white flex items-center justify-center hover:purple-600 transition-all"
+      onClick={() => window.open("linkedin.com/in/doha-abdelrahman-3540292a5", "_blank")}
     >
       {/* LinkedIn أيقونة */}
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
