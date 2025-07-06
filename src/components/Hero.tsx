@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
+          src=""C:\Users\Doha\OneDrive\Hnu\WhatsApp Image 2025-06-22 at 16.25.05_6d9fe2ba.jpg""
           alt="Programming workspace"
           className="w-full h-full object-cover opacity-20"
         />
