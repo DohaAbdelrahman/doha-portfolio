@@ -35,14 +35,12 @@ const Hero = () => {
               Doha Abdelrahman
             </h1>
 
-            <p className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+            <p className="text-xl md:text-3xl font-semibold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
               <TypeAnimation
                 sequence={[
                   'Data Scientist',
                   1500,
                   'Data Analyst',
-                  1500,
-                  'Machine Learning Expert',
                   1500,
                 ]}
                 speed={80}
