@@ -86,7 +86,7 @@ const Hero = () => {
 
     <button
       className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-900 transition-all"
-      onClick={() => window.open("https://github.com/yourusername", "_blank")}
+      onClick={() => window.open("https://github.com/DohaAbdelrahman", "_blank")}
     >
       {/* GitHub أيقونة */}
       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
