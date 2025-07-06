@@ -58,15 +58,17 @@ const Hero = () => {
         <Mail className="mr-2 h-4 w-4" />
         Get In Touch
       </Button>
-      <Button
-        variant="outline"
-        size="lg"
-        className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
-        onClick={() => window.open("C:/Users/Doha/Downloads/CV.DohaAbdelrahman.pdf")}
-      >
-        <Download className="mr-2 h-4 w-4" />
-        Download CV
-      </Button>
+      <a href="/CV.DohaAbdelrahman.pdf" download>
+  <Button
+    variant="outline"
+    size="lg"
+    className="border-primary/30 hover:border-primary hover:bg-primary/10"
+  >
+    <Download className="mr-2 h-4 w-4" />
+    Download CV
+  </Button>
+</a>
+
     </div>
 
         {/* Scroll Indicator */}
