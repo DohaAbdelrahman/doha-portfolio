@@ -7,9 +7,12 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const navItems = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "/" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "/experience" },
+    { name: "Education", href: "/education" },
+    { name: "Certifications", href: "/certifications" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" }
   ];
@@ -35,10 +38,16 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('/')) {
+      // Navigate to different page
+      window.location.href = href;
+    } else if (href.startsWith('#')) {
+      // Scroll to section on current page
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsOpen(false);
   };
@@ -57,9 +66,10 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                  activeSection === item.href.substring(1)
+                  (item.href.startsWith('/') && window.location.pathname === item.href) ||
+                  (item.href.startsWith('#') && activeSection === item.href.substring(1))
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
@@ -70,7 +80,7 @@ const Navigation = () => {
             <Button 
               size="sm" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => handleNavigation("#contact")}
             >
               Hire Me
             </Button>
@@ -94,9 +104,10 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className={`block w-full text-left px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary hover:bg-primary/10 rounded-md ${
-                    activeSection === item.href.substring(1)
+                    (item.href.startsWith('/') && window.location.pathname === item.href) ||
+                    (item.href.startsWith('#') && activeSection === item.href.substring(1))
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground"
                   }`}
@@ -108,7 +119,7 @@ const Navigation = () => {
                 <Button 
                   size="sm" 
                   className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
-                  onClick={() => scrollToSection("#contact")}
+                  onClick={() => handleNavigation("#contact")}
                 >
                   Hire Me
                 </Button>

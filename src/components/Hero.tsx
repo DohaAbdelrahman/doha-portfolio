@@ -28,28 +28,31 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-          Doha Abdelrahman
-        </h1>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 animate-fade-in">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+              Doha Abdelrahman
+            </h1>
 
-        <p className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-          <TypeAnimation
-            sequence={[
-              'Data Scientist',
-              1500,
-              'Data Analyst',
-              1500,
-              'Machine Learning Expert',
-              1500,
-            ]}
-            speed={80}
-            repeat={Infinity}
-            cursor={true}
-          />
-        </p>
-        
-        <div className="flex flex-col items-center gap-6 mb-12">
+            <p className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+              <TypeAnimation
+                sequence={[
+                  'Data Scientist',
+                  1500,
+                  'Data Analyst',
+                  1500,
+                  'Machine Learning Expert',
+                  1500,
+                ]}
+                speed={80}
+                repeat={Infinity}
+                cursor={true}
+              />
+            </p>
+            
+            <div className="flex flex-col items-center lg:items-start gap-6 mb-12">
   {/* الأزرار الأساسية */}
   <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
     <Button
@@ -94,7 +97,24 @@ const Hero = () => {
       </svg>
     </button>
   </div>
-</div>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute inset-4 bg-gradient-card rounded-full border-2 border-primary/30 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-muted-foreground text-sm">Profile Photo</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Add your photo here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         
 
