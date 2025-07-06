@@ -50,15 +50,24 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-            <Mail className="mr-2 h-4 w-4" />
-            Get In Touch
-          </Button>
-          <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary hover:bg-primary/10">
-            <Download className="mr-2 h-4 w-4" />
-            Download-CV
-          </Button>
-        </div>
+      <Button
+        size="lg"
+        className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all duration-300"
+        onClick={() => window.location.href = "mailto:your@email.com"}
+      >
+        <Mail className="mr-2 h-4 w-4" />
+        Get In Touch
+      </Button>
+      <Button
+        variant="outline"
+        size="lg"
+        className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
+        onClick={() => window.open("/cv.pdf", "_blank")}
+      >
+        <Download className="mr-2 h-4 w-4" />
+        Download CV
+      </Button>
+    </div>
 
         {/* Scroll Indicator */}
         <div className="animate-bounce">
