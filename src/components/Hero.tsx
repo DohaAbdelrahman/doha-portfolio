@@ -42,7 +42,7 @@ const Hero = () => {
           </Button>
           <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary hover:bg-primary/10">
             <Download className="mr-2 h-4 w-4" />
-            Download CV
+            Download-CV
           </Button>
         </div>
 
