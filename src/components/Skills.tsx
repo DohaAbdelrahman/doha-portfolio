@@ -7,7 +7,7 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
+        { name: "Python", level: 95 },
         { name: "Java", level: 75 },
         { name: "C++", level: 70 },
         { name: "JavaScript", level: 80 }
@@ -17,7 +17,7 @@ const Skills = () => {
       title: "Data Analysis",
       skills: [
         { name: "SQL", level: 85 },
-        { name: "Excel", level: 90 },
+        { name: "Excel", level: 95 },
         { name: "Power BI", level: 85 },
         { name: "Statistical Analysis", level: 80 }
       ]
@@ -37,7 +37,7 @@ const Skills = () => {
     "Python", "Java", "C++", "HTML/CSS", "JavaScript", "SQL", 
     "Microsoft Excel", "PowerPoint", "Power BI", "Word", "Data Analysis", 
     "Statistical Analysis", "Data Visualization", "Machine Learning",
-    "Business Intelligence", "Data Cleaning", "Predictive Modeling", "JSON"
+    "Business Intelligence", "Data Cleaning"
   ];
 
   return (
