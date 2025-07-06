@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -28,11 +29,37 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-          Doha Abdelrahman
+        <h1 className="text-5xl md:text-7xl font-bold text-sky-800 mb-6">
+          Hi, I'm{' '}
+          <span className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+            <TypeAnimation
+              sequence={[
+                'Doha Abdelrahman',
+                1000,
+                '',
+                500,
+              ]}
+              speed={80}
+              repeat={Infinity}
+              cursor={true}
+            />
+          </span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Data Analyst
+
+        <p className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+          <TypeAnimation
+            sequence={[
+              'Data Scientist',
+              1500,
+              'Data Analyst',
+              1500,
+              'Machine Learning Expert',
+              1500,
+            ]}
+            speed={80}
+            repeat={Infinity}
+            cursor={true}
+          />
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
