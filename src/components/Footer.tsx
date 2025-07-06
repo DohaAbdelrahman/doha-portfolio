@@ -7,19 +7,13 @@ const Footer = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/username",
+      url: "https://github.com/DohaAbdelrahman",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn", 
-      url: "https://linkedin.com/in/username",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com/username", 
+      url: "https://linkedin.com/in/doha-abdelrahman-3540292a5",
       color: "hover:text-blue-400"
     }
   ];

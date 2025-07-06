@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@developer.com",
-      link: "mailto:hello@developer.com"
+      value: "dohaabd757@dmail.com",
+      link: "mailto:dohaabd757@dmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "01029474155",
+      link: "tel:01029474155"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Al-Manib, Al-Giza",
       link: "#"
     }
   ];
@@ -30,19 +30,13 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/username",
+      url: "https://github.com/DohaAbdelrahman",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/username",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com/username",
+      url: "https://linkedin.com/in/doha-abdelrahman-3540292a5",
       color: "hover:text-blue-400"
     }
   ];

@@ -29,10 +29,10 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-          Full Stack Developer
+          Doha Abdelrahman Abdelqader
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Crafting digital experiences with modern technologies and clean, efficient code
+          Data Analyst & Computer Science Student passionate about transforming raw data into actionable insights
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

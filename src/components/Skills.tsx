@@ -5,39 +5,39 @@ import { Progress } from "@/components/ui/progress";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 90 }
+        { name: "Python", level: 90 },
+        { name: "Java", level: 75 },
+        { name: "C++", level: 70 },
+        { name: "JavaScript", level: 80 }
       ]
     },
     {
-      title: "Backend",
+      title: "Data Analysis",
       skills: [
-        { name: "Node.js", level: 88 },
-        { name: "Python", level: 82 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 }
+        { name: "SQL", level: 85 },
+        { name: "Excel", level: 90 },
+        { name: "Power BI", level: 85 },
+        { name: "Statistical Analysis", level: 80 }
       ]
     },
     {
-      title: "Tools & Others",
+      title: "Web Technologies",
       skills: [
-        { name: "Git", level: 92 },
-        { name: "Docker", level: 75 },
-        { name: "AWS", level: 78 },
-        { name: "CI/CD", level: 80 }
+        { name: "HTML/CSS", level: 85 },
+        { name: "Data Visualization", level: 82 },
+        { name: "Machine Learning", level: 75 },
+        { name: "Business Intelligence", level: 80 }
       ]
     }
   ];
 
   const technologies = [
-    "React", "TypeScript", "Node.js", "Python", "Next.js", "Vue.js", 
-    "Express.js", "FastAPI", "PostgreSQL", "MongoDB", "Redis", "Docker", 
-    "AWS", "GCP", "Kubernetes", "GraphQL", "REST APIs", "Socket.io",
-    "Tailwind CSS", "Material-UI", "Prisma", "Supabase"
+    "Python", "Java", "C++", "HTML/CSS", "JavaScript", "SQL", 
+    "Microsoft Excel", "PowerPoint", "Power BI", "Word", "Data Analysis", 
+    "Statistical Analysis", "Data Visualization", "Machine Learning",
+    "Business Intelligence", "Data Cleaning", "Predictive Modeling", "JSON"
   ];
 
   return (

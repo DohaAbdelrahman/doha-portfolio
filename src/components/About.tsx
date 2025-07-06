@@ -33,8 +33,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate full-stack developer with over 5 years of experience building 
-            web applications that make a difference. I love turning ideas into reality through code.
+            I'm a passionate Data Analyst and Computer Science student majoring in Information Technology. 
+            I love transforming raw data into actionable insights that drive strategic decision-making.
           </p>
         </div>
 
@@ -60,31 +60,32 @@ const About = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
                 <p className="text-muted-foreground mb-4">
-                  My coding journey began during university where I discovered my passion for 
-                  creating digital solutions. Since then, I've worked with startups and established 
-                  companies, building everything from e-commerce platforms to complex SaaS applications.
+                  Currently pursuing my Bachelor's Degree in Computer Science and Information Technology at 
+                  Helwan National University. I'm gaining hands-on experience through the Digital Egypt Pioneers 
+                  Initiative, where I work as a Data Analysis Intern.
                 </p>
                 <p className="text-muted-foreground">
-                  When I'm not coding, you'll find me contributing to open source projects, 
-                  writing technical blogs, or exploring the latest developments in web technologies.
+                  I'm experienced in data cleaning, exploration, visualization, statistical analysis, and 
+                  predictive modeling using Python, SQL, Excel, and Power BI. I focus on translating business 
+                  needs into actionable data solutions.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div className="p-4">
-                  <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">2+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 <div className="p-4">
-                  <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">1+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="p-4">
-                  <div className="text-3xl font-bold text-primary mb-2">20+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">8+</div>
                   <div className="text-sm text-muted-foreground">Technologies</div>
                 </div>
                 <div className="p-4">
-                  <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                  <div className="text-3xl font-bold text-primary mb-2">2027</div>
+                  <div className="text-sm text-muted-foreground">Graduation Year</div>
                 </div>
               </div>
             </div>
