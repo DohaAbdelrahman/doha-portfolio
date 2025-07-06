@@ -107,7 +107,7 @@ const Hero = () => {
                 <img
                   src="https://i.postimg.cc/bvtBr1TD/Whats-App-Image-2025-06-22-at-16-25-05-6d9fe2ba.jpg" // 🔁 غيري للرابط أو import لو محلية
                   alt="Doha's profile"
-                  className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg border-4 border-white"
+                  className="w-72 h-72 rounded-full object-cover mx-auto shadow-lg border-4 border-white"
                 />
               </div>
             </div>
