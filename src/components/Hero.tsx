@@ -104,7 +104,7 @@ const Hero = () => {
                 {/* Instagram */}
                 <button
                   className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-purple-700 transition-all"
-                  onClick={() => window.open("https://instagram.com/yourusername", "_blank")}
+                  onClick={() => window.open("https://www.instagram.com/doha__rahil/", "_blank")}
                 >
                   <Instagram className="w-5 h-5" />
                 </button>
