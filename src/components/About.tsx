@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code2, Coffee, Lightbulb, Users } from "lucide-react";
+import { Code2, BookOpen, Lightbulb, Users } from "lucide-react";
 
 const About = () => {
   const highlights = [
@@ -19,7 +19,7 @@ const About = () => {
       description: "Collaborating effectively with designers, developers, and stakeholders"
     },
     {
-      icon: Coffee,
+      icon: BookOpen,
       title: "Continuous Learner",
       description: "Always exploring new technologies and best practices"
     }
@@ -29,7 +29,7 @@ const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ const About = () => {
           <CardContent className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">My Journey</h3>
                 <p className="text-muted-foreground mb-4">
                   Currently pursuing my Bachelor's Degree in Computer Science and Information Technology at 
                   Helwan National University. I'm gaining hands-on experience through the Digital Egypt Pioneers 
