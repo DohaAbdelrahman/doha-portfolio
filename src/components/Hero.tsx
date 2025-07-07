@@ -38,23 +38,24 @@ const Hero = () => {
               Doha Abdelrahman
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-6 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-xl">
               Turning data into insights with machine learning, analytics, and visualizations, I deliver impactful solutions that simplify complexity.
             </p>
 
             {/* Main Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start items-center mb-12">
               <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 transition-all duration-300"
-                onClick={() => window.location.href = "#portfolio"}
-              >
-                View My Work
-              </Button>
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all duration-300"
+                  onClick={() => window.location.href = "mailto:your@email.com"}
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get In Touch
+                </Button>
 
               <Button
                 size="lg"
-                className="bg-black border border-white hover:bg-white hover:text-black transition"
+                 className="border-purple-400 hover:border-purple-600 hover:bg-purple-100 transition-all"
                 onClick={() =>
                   window.open(
                     "https://drive.google.com/file/d/1pP6CoZjq1oCSpuOwrjoZcuok6A3voY0D/view?usp=sharing",
