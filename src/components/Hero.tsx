@@ -35,7 +35,7 @@ const Hero = () => {
               Doha Abdelrahman
             </h1>
 
-            <p className="text-3xl md:text-5xl font-bold mb-6 text-[#d2b4de] animate-glow">
+            <p className="text-3xl md:text-5xl font-bold mb-6 text-[#cc66ff] animate-glow">
               <TypeAnimation
                 sequence={[
                   'Data Scientist',
