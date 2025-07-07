@@ -32,6 +32,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">
             About Me
           </h2>
+
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             I'm a passionate Data Analyst and Computer Science student majoring in Information Technology. 
             I love transforming raw data into actionable insights that drive strategic decision-making.
