@@ -36,7 +36,7 @@ const Hero = () => {
             </h1>
 
 
-            <p className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent animate-glow">
+            <p className="text-xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent animate-glow">
               <TypeAnimation
                 sequence={[
                   'Data Scientist',
