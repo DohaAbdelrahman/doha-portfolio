@@ -86,7 +86,7 @@ const Hero = () => {
                 </button>
             
                 <button
-                  className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-900 transition-all"
+                  className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-purple-700  transition-all"
                   onClick={() => window.open("https://github.com/DohaAbdelrahman", "_blank")}
                 >
                   {/* GitHub أيقونة */}
