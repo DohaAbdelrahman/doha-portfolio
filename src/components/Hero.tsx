@@ -96,7 +96,7 @@ const Hero = () => {
                 {/* Facebook */}
                 <button
                   className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-purple-700 transition-all"
-                  onClick={() => window.open("https://facebook.com/yourusername", "_blank")}
+                  onClick={() => window.open("https://www.facebook.com/doha.abdelrahman.228910", "_blank")}
                 >
                   <Facebook className="w-5 h-5" />
                 </button>
