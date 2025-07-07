@@ -44,8 +44,8 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Skills & Expertise
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">
+            Skills
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             A comprehensive toolkit of modern technologies and frameworks for building scalable applications
@@ -87,7 +87,7 @@ const Skills = () => {
         {/* Technology Tags */}
         <Card className="bg-gradient-card border-border/50 animate-slide-up">
           <CardHeader>
-            <CardTitle className="text-center text-2xl text-primary">Technologies I Work With</CardTitle>
+            <CardTitle className="text-center text-2xl bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">Technologies I Work With</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-3 justify-center">
