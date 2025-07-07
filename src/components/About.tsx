@@ -29,7 +29,7 @@ const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent  animate-glow">
             About Me
           </h2>
 
