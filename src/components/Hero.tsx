@@ -31,9 +31,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent animate-glow">
               Doha Abdelrahman
             </h1>
+
 
             <p className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent animate-glow">
               <TypeAnimation
