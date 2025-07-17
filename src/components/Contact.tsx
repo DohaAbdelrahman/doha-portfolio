@@ -114,57 +114,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
-          <Card className="bg-gradient-card border-border/50 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <CardHeader>
-              <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Name</label>
-                  <Input 
-                    placeholder="Your name" 
-                    className="bg-background/50 border-border/50 focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input 
-                    type="email" 
-                    placeholder="Your email" 
-                    className="bg-background/50 border-border/50 focus:border-primary"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium mb-2 block">Subject</label>
-                <Input 
-                  placeholder="Project inquiry" 
-                  className="bg-background/50 border-border/50 focus:border-primary"
-                />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium mb-2 block">Message</label>
-                <Textarea 
-                  placeholder="Tell me about your project..." 
-                  rows={5}
-                  className="bg-background/50 border-border/50 focus:border-primary resize-none"
-                />
-              </div>
-              
-              <Button 
-                size="lg" 
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
-              >
-                <Send className="h-4 w-4 mr-2" />
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
