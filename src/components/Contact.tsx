@@ -65,53 +65,53 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
+          {/* Contact Details */}
             <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <Card 
-                  key={item.title} 
-                  className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+            {contactInfo.map((item, index) => (
+            <Card
+              key={item.title}
+              className="bg-secondary/20 border border-border/30 hover:border-primary/40 shadow-md hover:shadow-lg transition-all duration-300 animate-slide-up backdrop-blur-md rounded-xl"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-5">
+                <a
+                  href={item.link}
+                  className="flex items-center space-x-5 group"
                 >
-                  <CardContent className="p-4">
-                    <a 
-                      href={item.link} 
-                      className="flex items-center space-x-4 group"
-                    >
-                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <item.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium group-hover:text-primary transition-colors">
-                          {item.title}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {item.value}
-                        </div>
-                      </div>
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  <div className="p-3 bg-primary/15 rounded-xl group-hover:bg-primary/25 transition-colors">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                      {item.title}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {item.value}
+                    </div>
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-            {/* Social Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-primary">Follow Me</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 bg-secondary/50 rounded-lg hover:bg-primary/20 transition-all duration-300 ${social.color} animate-fade-in`}
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <social.icon className="h-5 w-5" />
-                  </a>
-                ))}
-              </div>
+        {/* Social Links */}
+        <div className="mt-8">
+          <h4 className="text-lg font-semibold mb-4 text-primary">Follow Me</h4>
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((social, index) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-xl bg-secondary/30 hover:bg-primary/20 transition-all duration-500 ease-in-out transform hover:scale-110 backdrop-blur-md shadow-md ${social.color} animate-fade-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <social.icon className="h-5 w-5 text-white" />
+              </a>
+            ))}
+             </div>
             </div>
           </div>
         </div>
