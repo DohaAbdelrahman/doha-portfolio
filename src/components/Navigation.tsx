@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -17,33 +16,10 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" }
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const handleNavigation = (href: string) => {
     if (href.startsWith('/')) {
-      // Navigate to different page
       window.location.href = href;
     } else if (href.startsWith('#')) {
-      // Scroll to section on current page
       const element = document.getElementById(href.substring(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -67,12 +43,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                  (item.href.startsWith('/') && window.location.pathname === item.href) ||
-                  (item.href.startsWith('#') && activeSection === item.href.substring(1))
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {item.name}
               </button>
@@ -105,12 +76,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.href)}
-                  className={`block w-full text-left px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary hover:bg-primary/10 rounded-md ${
-                    (item.href.startsWith('/') && window.location.pathname === item.href) ||
-                    (item.href.startsWith('#') && activeSection === item.href.substring(1))
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground"
-                  }`}
+                  className="block w-full text-left px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-md transition-colors duration-300"
                 >
                   {item.name}
                 </button>
