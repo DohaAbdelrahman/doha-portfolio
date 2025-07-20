@@ -65,7 +65,7 @@ const Certifications = () => {
 
             <div className="space-y-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="p-6 md:p-8 shadow-card border-border/50 bg-card/50 backdrop-blur-sm">
+                <Card key={index} className="p-6 md:p-8 shadow-lg rounded-2xl border-2 border-primary/40 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:border-primary">
                   <div className="flex flex-col gap-6">
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
