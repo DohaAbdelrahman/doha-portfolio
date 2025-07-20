@@ -17,7 +17,7 @@ const Certifications = () => {
         "Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning",
         "Exploratory Data Analysis", "Data Visualization", "Machine Learning"
       ],
-      verificationUrl: "C:/Users/Doha/OneDrive/Hnu/Doha Abdelrahman Abdelqader.jpg"
+      verificationUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link"
     },
   ];
 
