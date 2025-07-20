@@ -6,18 +6,20 @@ import { Calendar, MapPin } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Data Analysis Intern",
-      company: "Bright Minds Co.",
-      location: "Jordan",
-      period: "June 2024 - August 2024",
+
+      title: "Google Data Analyst Intern (DEPI Initiative)",
+      company: "Ministry of Communications and Information Technology - Egypt",
+      location: "Remote - Egypt",
+      period: "November 2024 - May 2025",
       description: [
-        "Analyzed large datasets to identify trends and patterns",
-        "Created comprehensive reports and visualizations",
-        "Collaborated with cross-functional teams to drive data-driven decisions",
-        "Utilized statistical methods to extract meaningful insights"
+        "Completed the Google Data Analytics Certificate as part of the Digital Egypt Pioneers Initiative (DEPI)",
+        "Gained hands-on experience in Python, SQL, and advanced Excel for data analysis",
+        "Worked on real-world datasets to draw insights and build dashboards",
+        "Collaborated in group tasks simulating workplace environments"
       ],
-      skills: ["Data Analysis", "Statistical Analysis", "Data Visualization", "Reporting"]
+      skills: ["Python", "SQL", "Excel", "Google Data Studio", "Data Cleaning", "Exploratory Analysis"]
     }
+
   ];
 
   return (
