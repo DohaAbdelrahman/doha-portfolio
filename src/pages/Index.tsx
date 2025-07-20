@@ -13,29 +13,29 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
-        <div id="hero">
+      <main className="relative">
+        <div id="hero" className="sticky top-0 z-10 min-h-screen">
           <Hero />
         </div>
-        <div id="about">
+        <div id="about" className="sticky top-0 z-20 min-h-screen bg-background">
           <About />
         </div>
-        <div id="skills">
+        <div id="skills" className="sticky top-0 z-30 min-h-screen bg-background">
           <Skills />
         </div>
-        <div id="experience">
+        <div id="experience" className="sticky top-0 z-40 min-h-screen bg-background">
           <Experience />
         </div>
-        <div id="education">
+        <div id="education" className="sticky top-0 z-50 min-h-screen bg-background">
           <Education />
         </div>
-        <div id="certifications">
+        <div id="certifications" className="sticky top-0 z-60 min-h-screen bg-background">
           <Certifications />
         </div>
-        <div id="projects">
+        <div id="projects" className="sticky top-0 z-70 min-h-screen bg-background">
           <Projects />
         </div>
-        <div id="contact">
+        <div id="contact" className="sticky top-0 z-80 min-h-screen bg-background">
           <Contact />
         </div>
       </main>
