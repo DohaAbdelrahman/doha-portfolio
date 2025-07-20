@@ -21,21 +21,6 @@ const Experience = () => {
       ]
     },
     {
-      title: "Machine Learning Scholarship",
-      company: "NTI - National Telecommunication Institute",
-      location: "Giza, Egypt",
-      period: "July 2025 - August 2025",
-      type: "Remote",
-      description: "Completed a one-month hands-on training covering core ML algorithms, data preprocessing, model evaluation, and real-world applications using Python (Scikit-learn, Pandas, Matplotlib).",
-      technologies: ["Machine Learning", "Python", "Random Forest", "Linear Regression", "Decision Trees", "KNN", "Data Preprocessing", "Model Evaluation", "Scikit-learn"],
-      achievements: [
-        "Built end-to-end ML models using Scikit-learn",
-        "Applied algorithms like Naive Bayes, Decision Trees, and K-Means",
-        "Improved model accuracy through feature engineering and evaluation",
-        "Completed practical projects with real datasets"
-      ]
-    },
-    {
       title: "Data Science Scholarship",
       company: "ALX Africa",
       location: "Cairo, Egypt",
@@ -50,19 +35,20 @@ const Experience = () => {
       ]
     },
     {
-      title: "Data Science Scholarship",
+      title: "Google Data Analysis Scholarship",
       company: "Digital Egypt Pioneers Initiative - DEPI",
       location: "Cairo, Egypt",
       period: "Nov 2024 - May 2025",
       type: "Hybrid",
       description: "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
-      technologies: ["Python", "Data Analysis", "SQL", "Data Visualization", "Machine Learning", "MLOps", "Web Scraping", "Deployment"],
+      technologies: ["Excel","Python", "Data Analysis", "SQL","Tableau","Power BI","Data Cleaning","Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
       achievements: [
-        "Python proficiency in Python programming.",
-        "SQL ability to work with SQL databases.",
-        "DataAnalysis skills in analyzing and interpreting data.",
-        "MachineLearning expertise in building machine learning models."
-      ]
+        "Analyzed large datasets to identify trends and patterns",
+        "Created comprehensive reports and visualizations",
+        "Collaborated with cross-functional teams to drive data-driven decisions",
+        "Utilized statistical methods to extract meaningful insights"
+    ],
+      
     }
   ];
 
@@ -96,7 +82,7 @@ const Experience = () => {
 
             <div className="space-y-8">
               {experiences.map((experience, index) => (
-                <Card key={index} className="p-6 md:p-8 shadow-card border-border/50 bg-card/50 backdrop-blur-sm">
+                <Card key={index} className="p-6 md:p-8 shadow-lg rounded-2xl border-2 border-primary/40 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:border-primary">
                   <div className="flex flex-col gap-6">
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
