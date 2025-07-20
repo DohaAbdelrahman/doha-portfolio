@@ -7,12 +7,12 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const navItems = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "/" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
-    { name: "Education", href: "#education" },
-    { name: "Certifications", href: "#certifications" },
+    { name: "Experience", href: "/experience" },
+    { name: "Education", href: "/education" },
+    { name: "Certifications", href: "/certifications" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" }
   ];
@@ -39,7 +39,10 @@ const Navigation = () => {
   }, []);
 
   const handleNavigation = (href: string) => {
-    if (href.startsWith('#')) {
+    if (href.startsWith('/')) {
+      // Navigate to different page
+      window.location.href = href;
+    } else if (href.startsWith('#')) {
       // Scroll to section on current page
       const element = document.getElementById(href.substring(1));
       if (element) {
@@ -65,7 +68,8 @@ const Navigation = () => {
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                  activeSection === item.href.substring(1)
+                  (item.href.startsWith('/') && window.location.pathname === item.href) ||
+                  (item.href.startsWith('#') && activeSection === item.href.substring(1))
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
@@ -102,7 +106,8 @@ const Navigation = () => {
                   key={item.name}
                   onClick={() => handleNavigation(item.href)}
                   className={`block w-full text-left px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary hover:bg-primary/10 rounded-md ${
-                    activeSection === item.href.substring(1)
+                    (item.href.startsWith('/') && window.location.pathname === item.href) ||
+                    (item.href.startsWith('#') && activeSection === item.href.substring(1))
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground"
                   }`}
