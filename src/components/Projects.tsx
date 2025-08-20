@@ -21,14 +21,6 @@ const Projects = () => {
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "Longest Balanced Substring Search",
-      description:
-        "A Python algorithm to find the longest balanced substring containing only two unique characters.",
-      technologies: ["Python", "Algorithm Design", "Data Structures"],
-      image: "https://placehold.co/600x300?text=Algorithm",
-      githubUrl: "https://github.com/DohaAbdelrahman",
-    },
-    {
       title: "Hotel Booking Cancellation Prediction System",
       description:
         "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
@@ -78,7 +70,7 @@ const Projects = () => {
             >
               <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group overflow-hidden">
                 {/* Large Project Image */}
-                <div className="w-full h-48 md:h-60 overflow-hidden">
+                <div className="w-full h-32 md:h-40 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
