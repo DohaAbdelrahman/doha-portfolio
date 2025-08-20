@@ -10,7 +10,7 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "/helwan-uni.jpg", // ✅ الصورة في public
+      image: "public/helwan-uni.jpg.jpg", // ✅ الصورة في public
       description:
         "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
@@ -31,7 +31,7 @@ const Education = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-bold mb-12 text-center text-blue-400 drop-shadow-[0_0_20px_rgba(0,191,255,1)]"
+          className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)]"
         >
           EDUCATION
         </motion.h2>
@@ -44,7 +44,7 @@ const Education = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-[#0a0a0a] border border-blue-500/30 rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)]">
+            <Card className="bg-[#0a0a0a] border border-purple-500/40 rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] transition-all duration-500">
               <div className="flex flex-col md:flex-row">
                 {/* Left Side - Image */}
                 <div className="md:w-1/3">
@@ -60,18 +60,18 @@ const Education = () => {
 
                 {/* Right Side - Content */}
                 <div className="md:w-2/3 p-6">
-                  <h3 className="text-2xl font-bold text-blue-300 mb-2">
+                  <h3 className="text-xl font-semibold text-purple-300">
                     {edu.institution}
                   </h3>
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                  <div className="text-purple-400">>
                     <Calendar className="h-4 w-4" />
                     <span>{edu.period}</span>
                   </div>
 
-                  <p className="text-gray-300 mb-6">{edu.description}</p>
+                  <p className="text-xl font-semibold text-purple-300">{edu.description}</p>
 
                   <div>
-                    <h4 className="font-semibold text-blue-400 mb-3 text-lg">
+                    <h4 className="font-semibold text-purple-400">
                       Key Takeaways:
                     </h4>
                     <ul className="list-disc list-inside space-y-2 text-gray-300">
