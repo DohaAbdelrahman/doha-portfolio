@@ -11,7 +11,14 @@ const Projects = () => {
     {
       title: "Job Management System",
       description:
-        "A comprehensive job management system built with Python and JSON, allowing users to sign up, log in, and manage jobs based on their user type (client or freelancer).",
+        ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
+          Key Features:
+          User Authentication: Clients and freelancers can sign up and log in.
+          Job Posting: Clients can create job listings with a title and description.
+          Job Applications: Freelancers can view available jobs and send requests.
+          Client Management: Clients can review freelancer applications and accept/reject them.
+          Notification System: Freelancers receive status updates on their applications.
+         `,
       technologies: ["Python", "JSON", "Google Cloud Console"],
       image: "https://placehold.co/100x100?text=Job",
       githubUrl: "https://github.com/DohaAbdelrahman",
@@ -27,15 +34,22 @@ const Projects = () => {
     {
       title: "Hotel Booking Cancellation Prediction System",
       description:
-        "This application leverages machine learning to predict whether a hotel booking will be canceled based on booking, guest, and room features.",
+        "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. To address this, we developed a machine learning solution capable of predicting whether a booking will be canceled based on historical and real-time data",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://placehold.co/100x100?text=Hotel",
+      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "EDA & Machine Learning for Turkish Market Sales",
-      description:
-        "Analyze actual market data to uncover sales trends, seasonal patterns, and product performance.",
+      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
+      description: ` Analyze actual market data to uncover sales trends, seasonal patterns, and product performance, enabling smarter marketing and inventory decisions.
+                  🔹 What we did:
+                      • Cleaned 365,000+ records, handled missing values & outliers  
+                      • Conducted EDA using Python (Pandas, Seaborn)  
+                      • Normalized data up to 3NF using SQL  
+                      • Built interactive dashboards with Power BI  
+                      • Tracked KPIs (e.g., discount rate, invoice size, purchase frequency)  
+                      • Used Random Forest to predict future sales
+                     `,
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
       image: "https://placehold.co/100x100?text=EDA",
       githubUrl: "https://github.com/DohaAbdelrahman",
