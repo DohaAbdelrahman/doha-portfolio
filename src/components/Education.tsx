@@ -7,7 +7,7 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "/workspaces/doha-portfolio/src/assets/helwan-uni.jpg.jpg", // ✨ اسم الصورة بعد إعادة التسمية
+      image: "/helwan-uni.jpg", // ✅ الصورة من public
       description:
         "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
