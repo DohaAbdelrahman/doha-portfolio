@@ -10,7 +10,7 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "/my-uni.jpg", 
+      image: "/my-uni.jpsrc/components/image.png", 
       description:
         "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
