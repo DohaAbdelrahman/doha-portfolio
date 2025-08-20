@@ -19,6 +19,32 @@ const Certifications = () => {
       ],
       verificationUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link"
     },
+    {
+      title: "Huawei ICT Academy – Artificial Intelligence Scholarship",
+      issuer: "Huawei ICT Academy-Egypt",
+      date: "2025",
+      credentialId: "HCIA-AI V4.0",
+      status: "Active",
+      description:
+        "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
+      skills: [
+        "Data Analysis", "Machine Learning", "Python", "Data Cleaning",
+        "Exploratory Data Analysis", "Data Visualization", "Machine Learning"
+      ],
+      verificationUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link"
+    },
+    {
+      title: "Certificate in Teaching Business English ",
+      issuer: "Berlitz Egypt",
+      date: "2025",
+      status: "Active",
+      description:
+        "This training enhanced both my language proficiency and my ability to communicate effectively in a professional environment.",
+      skills: [
+        "Business English Communication", "Professional Writing ", "Presentation Skills"
+      ],
+      verificationUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link"
+    },
   ];
 
   const getStatusBadge = (status: string) => {
