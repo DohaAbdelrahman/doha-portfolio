@@ -20,11 +20,21 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "https://github.com/DohaAbdelrahman",
       featured: true
+    },
+    {
+      title: "Hotel Booking Cancellation Prediction System", 
+      description: "This application leverages machine learning to predict whether a hotel booking will be canceled based on various booking, guest, and room features. The tool helps hotels improve operational planning, optimize revenue management, and enhance guest satisfaction..",
+      technologies: ["Python", "Machine Learning", "Streamlit"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/DohaAbdelrahman",
+      featured: true
+
     }
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
+ 
 
   return (
     <section id="projects" className="py-20 px-6">
