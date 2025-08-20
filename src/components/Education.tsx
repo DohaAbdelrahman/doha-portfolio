@@ -10,7 +10,7 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "public/helwan-uni.jpg.jpg", // ✅ الصورة في public
+      image: "/helwan-uni.jpg.jpg", // ✅ في public تحطها بدون "public/"
       description:
         "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
@@ -31,11 +31,10 @@ const Education = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)] text-center"
+          className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.8)] text-center mb-12"
         >
           EDUCATION
         </motion.h2>
-
 
         {education.map((edu, index) => (
           <motion.div
@@ -45,27 +44,36 @@ const Education = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-[#0a0a0a] border border-purple-500/40 rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] transition-all duration-500">
+            <Card className="bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-purple-500/30 rounded-2xl overflow-hidden shadow-[0_0_18px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.9)] transition-all duration-500">
               <div className="flex flex-col md:flex-row">
                 {/* Left Side - Image */}
-                <div className="md:w-1/3">
-                  <Image src="public/helwan-uni.jpg.jpg" alt="Helwan University" width={500} height={300} />
-
+                <div className="md:w-1/3 relative h-64 md:h-auto">
+                  <Image
+                    src={edu.image}
+                    alt="Helwan University"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
+                  />
                 </div>
 
                 {/* Right Side - Content */}
-                <div className="md:w-2/3 p-6">
-                  <h3 className="text-xl font-semibold text-purple-300">
+                <div className="md:w-2/3 p-8 space-y-5">
+                  <h3 className="text-2xl font-semibold text-purple-300">
                     {edu.institution}
                   </h3>
-                  <div className="text-purple-400">
-                    <Calendar className="h-4 w-4" />
+
+                  <div className="flex items-center gap-2 text-purple-400 font-medium">
+                    <Calendar className="h-5 w-5" />
                     <span>{edu.period}</span>
                   </div>
 
-                  <p className="text-xl font-semibold text-gray-300">{edu.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {edu.description}
+                  </p>
+
                   <div>
-                    <h4 className="font-semibold text-purple-400">
+                    <h4 className="font-semibold text-purple-400 mb-2">
                       Key Takeaways:
                     </h4>
                     <ul className="list-disc list-inside space-y-2 text-gray-300">
