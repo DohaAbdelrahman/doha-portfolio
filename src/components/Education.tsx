@@ -7,7 +7,7 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "/helwan-uni.jpg", // ✅ الصورة من public
+      image: "/helwan-uni.jpg", // ✅ حط الصورة بتاعتك في فولدر public
       description:
         "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
@@ -26,7 +26,8 @@ const Education = () => {
       className="py-20 px-6 bg-gradient-hero min-h-screen"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent">
+        {/* Glow Effect on Title */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-blue-400 drop-shadow-[0_0_10px_rgba(0,191,255,0.9)]">
           Education
         </h2>
 
@@ -44,6 +45,7 @@ const Education = () => {
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
+                  priority // ✅ الصورة تتفعل وتتحمل أسرع
                 />
               </div>
 
