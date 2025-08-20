@@ -1,94 +1,75 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, GraduationCap } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar } from "lucide-react";
+import Image from "next/image";
 
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "Al-Ahliyya Amman University",
-      location: "Amman, Jordan",
-      period: "2021 - Present",
-      status: "In Progress",
-      gpa: "Excellent Academic Standing",
-      description: "Comprehensive study of computer science fundamentals including programming, algorithms, data structures, and software engineering principles.",
-      relevantCourses: [
-        "Data Structures & Algorithms",
-        "Database Systems",
-        "Software Engineering",
-        "Machine Learning",
-        "Statistics",
-        "Programming Languages"
-      ]
-    }
+      institution: "Helwan National University, Computer Science & Information Technology",
+      period: "October 2023 - Present",
+      image: "/workspaces/doha-portfolio/public/WhatsApp Image 2025-08-20 at 23.50.42_83c93f45.jpg", // ✨ ضيف صورة الجامعة هنا (خزنها في public/images)
+      description:
+        "A prestigious academic journey at Cairo University, Faculty of Computers and Information, offering a comprehensive foundation in computer science and information technology. The program focuses on developing strong problem-solving abilities, programming expertise, and innovative thinking, while encouraging teamwork, research, and continuous learning to prepare students for excellence in both academia and industry.",
+      takeaways: [
+        "Develop teamwork and project management skills",
+        "Gain proficiency in programming languages such as C++, Java, and Python",
+        "Master Object-Oriented Programming (OOP), data structures, and algorithms",
+        "Explore web development and database management",
+        "Build a solid foundation in your preferred specialization",
+      ],
+    },
   ];
 
   return (
     <section id="education" className="py-20 px-6 bg-gradient-hero min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Education
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Academic foundation building expertise in computer science and data analysis
-          </p>
-        </div>
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent">
+          Education
+        </h2>
 
-        <div className="space-y-8">
-          {education.map((edu, index) => (
-            <Card 
-              key={index}
-              className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 animate-slide-up"
-            >
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <GraduationCap className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-primary text-xl mb-2">{edu.degree}</CardTitle>
-                      <h4 className="text-lg font-semibold text-foreground mb-1">{edu.institution}</h4>
-                      <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                        <MapPin className="h-4 w-4" />
-                        <span className="text-sm">{edu.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col md:items-end gap-2">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span className="text-sm">{edu.period}</span>
-                    </div>
-                    <Badge variant="secondary" className="bg-primary/20 text-primary border border-primary/30">
-                      {edu.status}
-                    </Badge>
-                    <div className="text-sm text-primary font-medium">{edu.gpa}</div>
-                  </div>
+        {education.map((edu, index) => (
+          <Card
+            key={index}
+            className="bg-gradient-card border border-border/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div className="flex flex-col md:flex-row">
+              {/* Left Side - Image */}
+              <div className="md:w-1/3">
+                <Image
+                  src={edu.image}
+                  alt={edu.institution}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right Side - Content */}
+              <div className="md:w-2/3 p-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
+                  {edu.institution}
+                </h3>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                  <Calendar className="h-4 w-4" />
+                  <span>{edu.period}</span>
                 </div>
-              </CardHeader>
-              <CardContent>
+
                 <p className="text-muted-foreground mb-6">{edu.description}</p>
-                
+
                 <div>
-                  <h5 className="font-semibold text-foreground mb-3">Relevant Coursework:</h5>
-                  <div className="flex flex-wrap gap-2">
-                    {edu.relevantCourses.map((course) => (
-                      <Badge 
-                        key={course} 
-                        variant="secondary" 
-                        className="bg-secondary/50 hover:bg-primary/20 hover:text-primary border border-border/50"
-                      >
-                        {course}
-                      </Badge>
+                  <h4 className="font-semibold text-foreground mb-3 text-lg">
+                    Key Takeaways:
+                  </h4>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    {edu.takeaways.map((point, i) => (
+                      <li key={i}>{point}</li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              </div>
+            </div>
+          </Card>
+        ))}
       </div>
     </section>
   );
