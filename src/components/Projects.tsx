@@ -17,7 +17,7 @@ const Projects = () => {
           • Client Management & Notifications  
          `,
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      image: "https://placehold.co/600x300?text=Job+System",
+      image: "https://www.bing.com/th/id/OIP.DJWgxvYRReMosFo4SJaEagHaD4?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
@@ -33,11 +33,11 @@ const Projects = () => {
       description:
         "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://placehold.co/600x300?text=Hotel+Prediction",
+      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "EDA & Machine Learning for Turkish Market Sales",
+      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
       description: `Analyze market data to uncover trends, seasonal patterns & product performance.  
           🔹 What we did:  
           • Cleaned 365,000+ records  
@@ -47,7 +47,7 @@ const Projects = () => {
           • Random Forest for Sales Prediction  
       `,
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
-      image: "https://placehold.co/600x300?text=EDA+Project",
+      image: "https://www.bing.com/th/id/OIP.PmrqeWwi2QglSauMYIanhwHaE8?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
   ];
