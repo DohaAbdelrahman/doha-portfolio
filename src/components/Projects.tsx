@@ -33,7 +33,7 @@ const Projects = () => {
       description:
         "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image: "https://www.bing.com/th/id/OIP.wmsRZssU1jCfGQOU-j2nxAHaG1?w=220&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
