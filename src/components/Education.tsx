@@ -51,15 +51,13 @@ const Education = () => {
                   <Image 
                     src={edu.image} 
                     alt="Helwan University" 
-                    layout="fill" 
-                    objectFit="cover" 
-                    className="rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
+                    fill 
+                    className="object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
                   />
-
                 </div>
 
                 {/* Right Side - Content */}
-                <div className="md:w-2/3 p-8 space-y-5">
+                <div className="md:w-2/3 p-8 space-y-6">
                   <h3 className="text-2xl font-semibold text-purple-300">
                     {edu.institution}
                   </h3>
@@ -69,11 +67,12 @@ const Education = () => {
                     <span>{edu.period}</span>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed">
-                    {edu.description}
-                  </p>
+                  {/* ✅ Box فيه إطار + Glow حوالين الوصف + Key Takeaways */}
+                  <div className="border border-purple-500/40 rounded-xl p-5 bg-black/40 shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] transition-all duration-500">
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      {edu.description}
+                    </p>
 
-                  <div>
                     <h4 className="font-semibold text-purple-400 mb-2">
                       Key Takeaways:
                     </h4>
