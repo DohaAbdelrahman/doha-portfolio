@@ -31,10 +31,11 @@ const Education = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)]"
+          className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)] text-center"
         >
           EDUCATION
         </motion.h2>
+
 
         {education.map((edu, index) => (
           <motion.div
@@ -68,8 +69,7 @@ const Education = () => {
                     <span>{edu.period}</span>
                   </div>
 
-                  <p className="text-xl font-semibold text-purple-300">{edu.description}</p>
-
+                  <p className="text-xl font-semibold text-gray-300">{edu.description}</p>
                   <div>
                     <h4 className="font-semibold text-purple-400">
                       Key Takeaways:
