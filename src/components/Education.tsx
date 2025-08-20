@@ -31,8 +31,11 @@ const Education = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.8)] text-center mb-12"
         >
-          EDUCATION
+          Education
         </motion.h2>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          A showcase of my recent work - from full-stack applications to innovative solutions that solve real-world problems.
+        </p>
 
         {education.map((edu, index) => (
           <motion.div
