@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 
@@ -7,9 +7,9 @@ const Education = () => {
     {
       institution: "Helwan National University, Computer Science & Information Technology",
       period: "October 2023 - Present",
-      image: "/workspaces/doha-portfolio/public/WhatsApp Image 2025-08-20 at 23.50.42_83c93f45.jpg", // ✨ ضيف صورة الجامعة هنا (خزنها في public/images)
+      image: "/workspaces/doha-portfolio/src/assets/helwan-uni.jpg.jpg", // ✨ اسم الصورة بعد إعادة التسمية
       description:
-        "A prestigious academic journey at Cairo University, Faculty of Computers and Information, offering a comprehensive foundation in computer science and information technology. The program focuses on developing strong problem-solving abilities, programming expertise, and innovative thinking, while encouraging teamwork, research, and continuous learning to prepare students for excellence in both academia and industry.",
+        "Kickstart your academic journey with a strong foundation in computer science and IT. The program emphasizes problem-solving, programming, and teamwork, creating the perfect environment for growth and innovation.",
       takeaways: [
         "Develop teamwork and project management skills",
         "Gain proficiency in programming languages such as C++, Java, and Python",
@@ -21,7 +21,10 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-6 bg-gradient-hero min-h-screen">
+    <section
+      id="education"
+      className="py-20 px-6 bg-gradient-hero min-h-screen"
+    >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent">
           Education
