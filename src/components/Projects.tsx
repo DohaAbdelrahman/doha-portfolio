@@ -29,6 +29,15 @@ const Projects = () => {
       githubUrl: "https://github.com/DohaAbdelrahman",
       featured: true
 
+    },
+    {
+      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales", 
+      description: "Analyze actual market data to uncover sales trends, seasonal patterns, and product performance, enabling smarter marketing and inventory decisions.",
+      technologies: ["Python", "SQL", "Exploratory Data Analysis (EDA)","Machine Learning","Power BI"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/DohaAbdelrahman",
+      featured: true
+
     }
   ];
 
