@@ -48,13 +48,14 @@ const Education = () => {
               <div className="flex flex-col md:flex-row">
                 {/* Left Side - Image */}
                 <div className="md:w-1/3 relative h-64 md:h-auto">
-                  <Image
-                    src={edu.image}
-                    alt="Helwan University"
-                    layout="fill"
-                    objectFit="cover"
+                  <Image 
+                    src={edu.image} 
+                    alt="Helwan University" 
+                    layout="fill" 
+                    objectFit="cover" 
                     className="rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
                   />
+
                 </div>
 
                 {/* Right Side - Content */}
