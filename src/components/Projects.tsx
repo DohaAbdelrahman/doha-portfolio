@@ -13,7 +13,7 @@ const Projects = () => {
       description:
         "A comprehensive job management system built with Python and JSON, allowing users to sign up, log in, and manage jobs based on their user type (client or freelancer).",
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      image: "/icons/job.svg", // حط صورة او ايقونة هنا
+      image: "https://placehold.co/100x100?text=Job",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
@@ -21,7 +21,7 @@ const Projects = () => {
       description:
         "A Python algorithm to find the longest balanced substring containing only two unique characters.",
       technologies: ["Python", "Algorithm Design", "Data Structures"],
-      image: "/icons/algorithm.svg",
+      image: "https://placehold.co/100x100?text=Algo",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       description:
         "This application leverages machine learning to predict whether a hotel booking will be canceled based on booking, guest, and room features.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "/icons/hotel.svg",
+      image: "https://placehold.co/100x100?text=Hotel",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
@@ -37,7 +37,7 @@ const Projects = () => {
       description:
         "Analyze actual market data to uncover sales trends, seasonal patterns, and product performance.",
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
-      image: "/icons/eda.svg",
+      image: "https://placehold.co/100x100?text=EDA",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
   ];
@@ -69,11 +69,11 @@ const Projects = () => {
               <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group">
                 {/* Header with Icon */}
                 <CardHeader className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shadow-md group-hover:shadow-lg transition">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shadow-md group-hover:shadow-lg transition overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-7 h-7"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <CardTitle className="text-xl text-primary group-hover:text-primary-glow transition-colors">
