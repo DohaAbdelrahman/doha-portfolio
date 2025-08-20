@@ -63,7 +63,7 @@ const Education = () => {
                   <h3 className="text-xl font-semibold text-purple-300">
                     {edu.institution}
                   </h3>
-                  <div className="text-purple-400">>
+                  <div className="text-purple-400">
                     <Calendar className="h-4 w-4" />
                     <span>{edu.period}</span>
                   </div>
