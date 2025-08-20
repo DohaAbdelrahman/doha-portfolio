@@ -10,17 +10,14 @@ const Projects = () => {
   const projects = [
     {
       title: "Job Management System",
-      description:
-        ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
+      description: ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
           Key Features:
-          User Authentication: Clients and freelancers can sign up and log in.
-          Job Posting: Clients can create job listings with a title and description.
-          Job Applications: Freelancers can view available jobs and send requests.
-          Client Management: Clients can review freelancer applications and accept/reject them.
-          Notification System: Freelancers receive status updates on their applications.
+          • User Authentication (Clients & Freelancers)  
+          • Job Posting & Applications  
+          • Client Management & Notifications  
          `,
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      image: "https://placehold.co/100x100?text=Job",
+      image: "https://placehold.co/600x300?text=Job+System",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
@@ -28,30 +25,29 @@ const Projects = () => {
       description:
         "A Python algorithm to find the longest balanced substring containing only two unique characters.",
       technologies: ["Python", "Algorithm Design", "Data Structures"],
-      image: "https://placehold.co/100x100?text=Algo",
+      image: "https://placehold.co/600x300?text=Algorithm",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
       title: "Hotel Booking Cancellation Prediction System",
       description:
-        "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. To address this, we developed a machine learning solution capable of predicting whether a booking will be canceled based on historical and real-time data",
+        "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image: "https://placehold.co/600x300?text=Hotel+Prediction",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
-      description: ` Analyze actual market data to uncover sales trends, seasonal patterns, and product performance, enabling smarter marketing and inventory decisions.
-                  🔹 What we did:
-                      • Cleaned 365,000+ records, handled missing values & outliers  
-                      • Conducted EDA using Python (Pandas, Seaborn)  
-                      • Normalized data up to 3NF using SQL  
-                      • Built interactive dashboards with Power BI  
-                      • Tracked KPIs (e.g., discount rate, invoice size, purchase frequency)  
-                      • Used Random Forest to predict future sales
-                     `,
+      title: "EDA & Machine Learning for Turkish Market Sales",
+      description: `Analyze market data to uncover trends, seasonal patterns & product performance.  
+          🔹 What we did:  
+          • Cleaned 365,000+ records  
+          • EDA with Python (Pandas, Seaborn)  
+          • Normalized data to 3NF (SQL)  
+          • Interactive Dashboards (Power BI)  
+          • Random Forest for Sales Prediction  
+      `,
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
-      image: "https://placehold.co/100x100?text=EDA",
+      image: "https://placehold.co/600x300?text=EDA+Project",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
   ];
@@ -80,24 +76,27 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group">
-                {/* Header with Icon */}
-                <CardHeader className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shadow-md group-hover:shadow-lg transition overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-xl text-primary group-hover:text-primary-glow transition-colors">
+              <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group overflow-hidden">
+                {/* Large Project Image */}
+                <div className="w-full h-48 md:h-60 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Content */}
+                <CardHeader>
+                  <CardTitle className="text-2xl text-primary group-hover:text-primary-glow transition-colors">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
 
-                {/* Content */}
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{project.description}</p>
+                  <p className="text-muted-foreground whitespace-pre-line">
+                    {project.description}
+                  </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
