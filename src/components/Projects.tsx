@@ -1,170 +1,137 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
     {
       title: "Job Management System",
-      description: "A comprehensive job management system built with Python and JSON, allowing users to sign up, log in, and manage jobs based on their user type (client or freelancer). Implemented interactive user interface where clients can add jobs and freelancers can send job requests.",
+      description:
+        "A comprehensive job management system built with Python and JSON, allowing users to sign up, log in, and manage jobs based on their user type (client or freelancer).",
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      liveUrl: "#",
+      image: "/icons/job.svg", // حط صورة او ايقونة هنا
       githubUrl: "https://github.com/DohaAbdelrahman",
-      featured: true
     },
     {
-      title: "Longest Balanced Substring Search", 
-      description: "A Python algorithm to find the longest balanced substring containing only two unique characters. Implemented a function that uses a difference approach to track occurrences and efficiently find the longest balanced substring.",
+      title: "Longest Balanced Substring Search",
+      description:
+        "A Python algorithm to find the longest balanced substring containing only two unique characters.",
       technologies: ["Python", "Algorithm Design", "Data Structures"],
-      liveUrl: "#",
+      image: "/icons/algorithm.svg",
       githubUrl: "https://github.com/DohaAbdelrahman",
-      featured: true
     },
     {
-      title: "Hotel Booking Cancellation Prediction System", 
-      description: "This application leverages machine learning to predict whether a hotel booking will be canceled based on various booking, guest, and room features. The tool helps hotels improve operational planning, optimize revenue management, and enhance guest satisfaction..",
+      title: "Hotel Booking Cancellation Prediction System",
+      description:
+        "This application leverages machine learning to predict whether a hotel booking will be canceled based on booking, guest, and room features.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      liveUrl: "#",
+      image: "/icons/hotel.svg",
       githubUrl: "https://github.com/DohaAbdelrahman",
-      featured: true
-
     },
     {
-      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales", 
-      description: "Analyze actual market data to uncover sales trends, seasonal patterns, and product performance, enabling smarter marketing and inventory decisions.",
-      technologies: ["Python", "SQL", "Exploratory Data Analysis (EDA)","Machine Learning","Power BI"],
-      liveUrl: "#",
+      title: "EDA & Machine Learning for Turkish Market Sales",
+      description:
+        "Analyze actual market data to uncover sales trends, seasonal patterns, and product performance.",
+      technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
+      image: "/icons/eda.svg",
       githubUrl: "https://github.com/DohaAbdelrahman",
-      featured: true
-
-    }
+    },
   ];
-
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
- 
 
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
+        {/* Section Header */}
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             My Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my programming projects, demonstrating expertise in data analysis, 
-            algorithm design, and software development
+            A showcase of my programming projects, demonstrating expertise in
+            data analysis, algorithm design, and software development.
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {featuredProjects.map((project, index) => (
-            <Card 
-              key={project.title} 
-              className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-card group animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
-              <CardHeader>
-                <CardTitle className="text-xl text-primary group-hover:text-primary-glow transition-colors">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <Badge 
-                      key={tech} 
-                      variant="secondary" 
-                      className="bg-secondary/50 text-xs"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
+              <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group">
+                {/* Header with Icon */}
+                <CardHeader className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shadow-md group-hover:shadow-lg transition">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-7 h-7"
+                    />
+                  </div>
+                  <CardTitle className="text-xl text-primary group-hover:text-primary-glow transition-colors">
+                    {project.title}
+                  </CardTitle>
+                </CardHeader>
 
-                <div className="flex gap-3 pt-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="border-primary/30 hover:border-primary hover:bg-primary/10"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      View Code
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+                {/* Content */}
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">{project.description}</p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="bg-secondary/50 text-xs"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-3 pt-3">
+                    <Button
+                      size="sm"
+                      className="bg-primary/90 text-white hover:bg-primary glow-sm transition-all"
+                      asChild
+                    >
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="h-4 w-4 mr-2" />
+                        View Code
+                      </a>
+                    </Button>
+
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                      asChild
+                    >
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
-
-        {/* Hide other projects section since we only have 2 projects */}
-        {otherProjects.length > 0 && (
-          <div>
-            <h3 className="text-2xl font-bold mb-8 text-center text-primary">Other Notable Projects</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {otherProjects.map((project, index) => (
-                <Card 
-                  key={project.title} 
-                  className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-card group animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg text-primary group-hover:text-primary-glow transition-colors">
-                      {project.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground">{project.description}</p>
-                    
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge 
-                          key={tech} 
-                          variant="secondary" 
-                          className="bg-secondary/50 text-xs"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-2 pt-1">
-                      <Button 
-                        size="sm" 
-                        variant="ghost" 
-                        className="h-8 px-3 text-primary hover:bg-primary/10"
-                        asChild
-                      >
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Demo
-                        </a>
-                      </Button>
-                      <Button 
-                        size="sm" 
-                        variant="ghost" 
-                        className="h-8 px-3 text-primary hover:bg-primary/10"
-                        asChild
-                      >
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-3 w-3 mr-1" />
-                          Code
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
