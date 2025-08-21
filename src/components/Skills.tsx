@@ -44,7 +44,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
             Skills
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <Card 
               key={category.title} 
-              className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 animate-slide-up"
+              className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
               <CardHeader>
@@ -85,9 +85,9 @@ const Skills = () => {
         </div>
 
         {/* Technology Tags */}
-        <Card className="bg-gradient-card border-border/50 animate-slide-up">
+        <Card className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up">
           <CardHeader>
-            <CardTitle className="text-center text-2xl bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">Technologies I Work With</CardTitle>
+            <CardTitle className="text-center text-2xl bg-gradient-text bg-clip-text text-transparent">Technologies I Work With</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-3 justify-center">

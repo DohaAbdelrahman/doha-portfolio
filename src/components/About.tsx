@@ -29,7 +29,7 @@ const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent  animate-glow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
             About Me
           </h2>
 
@@ -43,7 +43,7 @@ const About = () => {
           {highlights.map((item, index) => (
             <Card 
               key={index} 
-              className="bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-card animate-slide-up"
+              className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 text-center">
@@ -55,11 +55,11 @@ const About = () => {
           ))}
         </div>
 
-        <Card className="bg-gradient-card border-border/50 animate-slide-up">
+        <Card className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up">
           <CardContent className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#cc66ff] via-[#e1bee7] to-[#f48fb1] bg-clip-text text-transparent">My Journey</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-text bg-clip-text text-transparent">My Journey</h3>
                 <p className="text-muted-foreground mb-4">
                   Currently pursuing my Bachelor's Degree in Computer Science and Information Technology at 
                   Helwan National University. I'm gaining hands-on experience through the Digital Egypt Pioneers 

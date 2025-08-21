@@ -33,7 +33,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-text bg-clip-text text-transparent">
             Portfolio
           </div>
 
@@ -50,7 +50,7 @@ const Navigation = () => {
             ))}
             <Button 
               size="sm" 
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+              className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
               onClick={() => handleNavigation("#contact")}
             >
               Hire Me
@@ -84,7 +84,7 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button 
                   size="sm" 
-                  className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                  className="w-full bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
                   onClick={() => handleNavigation("#contact")}
                 >
                   Hire Me

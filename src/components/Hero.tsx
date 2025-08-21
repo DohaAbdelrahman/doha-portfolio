@@ -1,19 +1,21 @@
-import {Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float opacity-60"></div>
-        <div className="absolute top-40 right-32 w-1 h-1 bg-primary-glow rounded-full animate-float opacity-80" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-primary rounded-full animate-float opacity-70" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 right-20 w-2 h-2 bg-primary-glow rounded-full animate-float opacity-50" style={{animationDelay: '3s'}}></div>
+      {/* Floating geometric elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-32 left-16 w-4 h-4 bg-primary rounded-full animate-float opacity-60"></div>
+        <div className="absolute top-64 right-32 w-6 h-6 bg-primary rounded-lg animate-float opacity-40" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 left-1/4 w-3 h-3 bg-primary-glow rounded-full animate-float opacity-70" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-32 right-16 w-5 h-5 bg-primary rounded-lg rotate-45 animate-float opacity-50" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 right-20 w-2 h-2 bg-primary-glow rounded-full animate-float opacity-80" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-20 right-1/4 w-8 h-8 bg-primary/20 rounded-lg rotate-12 animate-float opacity-30" style={{animationDelay: '2.5s'}}></div>
       </div>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8 animate-slide-up">
             <div className="inline-block">
@@ -22,22 +24,23 @@ export const Hero = () => {
               </span>
             </div>
             
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold bg-hero-gradient bg-clip-text text-transparent leading-tight">
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight">
                 Doha Abdelrahman
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Turning data into insights with machine learning, analytics, and visualizations, 
-                I deliver impactful solutions that simplify complexity.
+                Turning data into insights with machine learning, analytics, and 
+                visualizations, I deliver impactful solutions that simplify 
+                complexity.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="default" size="lg">
+              <Button className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300">
                 <Mail className="w-5 h-5 mr-2" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" className="border-primary/30 hover:bg-primary/10">
                 <span className="mr-2">📄</span>
                 Download CV
               </Button>
@@ -46,19 +49,19 @@ export const Hero = () => {
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
               <a href="https://github.com/DohaAbdelrahman" target="_blank" rel="noopener noreferrer" 
-                 className="p-3 rounded-lg bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+                 className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a href="https://www.linkedin.com/in/doha-abdelrahman-3540292a5" target="_blank" rel="noopener noreferrer"
-                 className="p-3 rounded-lg bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+                 className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a href="mailto:dohaabd757@gmail.com"
-                 className="p-3 rounded-lg bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+                 className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a href="tel:+201029474155"
-                 className="p-3 rounded-lg bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+                 className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
@@ -67,14 +70,15 @@ export const Hero = () => {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-hero-gradient p-1 animate-glow">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-primary/30">DA</div>
+              <div className="w-80 h-80 rounded-full bg-gradient-primary p-1 animate-glow">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-primary-glow/5 flex items-center justify-center">
+                  <div className="text-8xl font-bold bg-gradient-text bg-clip-text text-transparent">DA</div>
                 </div>
               </div>
-              {/* Floating elements */}
+              {/* Floating elements around image */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-lg animate-float opacity-80"></div>
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-primary-glow rounded-lg animate-float opacity-60" style={{animationDelay: '1.5s'}}></div>
+              <div className="absolute top-8 -left-8 w-4 h-4 bg-primary rounded-full animate-float opacity-70" style={{animationDelay: '2.5s'}}></div>
             </div>
           </div>
         </div>
