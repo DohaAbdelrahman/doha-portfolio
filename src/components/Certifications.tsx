@@ -29,7 +29,6 @@ export const Certifications = () => {
       issuer: "Berlitz Egypt",
       status: "Active",
       year: "2025",
-      credentialId: "",
       description: "This training enhanced both my language proficiency and my ability to communicate effectively in a professional environment.",
       skills: ["Business English Communication", "Professional Writing", "Presentation Skills"],
       verifyUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link"
