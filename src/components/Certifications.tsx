@@ -89,7 +89,7 @@ export const Certifications = () => {
                     <h4 className="text-lg font-semibold mb-3">Skills Validated</h4>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {cert.skills.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium">
+                        <span key={skillIndex} className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium transition-colors hover:bg-primary/30">
                           {skill}
                         </span>
                       ))}
