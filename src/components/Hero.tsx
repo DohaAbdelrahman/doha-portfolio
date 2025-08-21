@@ -1,6 +1,5 @@
 import {Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
-import myPhoto from "@/assets/myPhoto.jpg"; // حطي صورتك هنا
 
 export const Hero = () => {
   return (
@@ -69,11 +68,9 @@ export const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="relative">
               <div className="w-80 h-80 rounded-full bg-hero-gradient p-1 animate-glow">
-                <img 
-                  src={myPhoto}
-                  alt="Doha Abdelrahman - Data Scientist"
-                  className="w-full h-full rounded-full object-cover bg-card"
-                />
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <div className="text-6xl font-bold text-primary/30">DA</div>
+                </div>
               </div>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-lg animate-float opacity-80"></div>
