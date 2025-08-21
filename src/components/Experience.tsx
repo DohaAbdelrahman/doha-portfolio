@@ -136,8 +136,14 @@ const Experience = () => {
         return "bg-orange-400 text-white";
       case "Power BI":
         return "bg-yellow-500 text-black";
-      default:
+      case "Data Cleaning":
         return "bg-red-300 text-black";
+      case "Data Visualization":
+        return "bg-red-300 text-black";
+      case "Data Analysis":
+        return "bg-red-300 text-black";
+      default:
+        return "bg-gray-300 text-black";
     }
   };
 
