@@ -1,149 +1,114 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Award, ExternalLink, CalendarDays, CheckCircle, Clock } from "lucide-react";
-import Navigation from "@/components/Navigation";
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Calendar, ExternalLink, Award } from "lucide-react"
 
-const Certifications = () => {
+export const Certifications = () => {
   const certifications = [
     {
       title: "Google Data Analysts Scholarship",
       issuer: "Digital Egypt Pioneers Initiative - DEPI",
-      date: "2025",
-      credentialId: "DEPI-DA-R2",
       status: "Active",
-      description:
-        "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
-      skills: [
-        "Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning",
-        "Exploratory Data Analysis", "Data Visualization", "Machine Learning"
-      ],
-      verificationUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link"
+      year: "2025",
+      credentialId: "DEPI-DA-R2",
+      description: "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
+      skills: ["Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
+      verifyUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link"
     },
     {
       title: "Huawei ICT Academy – Artificial Intelligence Scholarship",
       issuer: "Huawei ICT Academy-Egypt",
-      date: "2025",
+      status: "Active", 
+      year: "2025",
       credentialId: "HCIA-AI V4.0",
-      status: "Active",
-      description:
-        "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
-      skills: [
-        "Data Analysis", "Machine Learning", "Python", "Data Cleaning",
-        "Exploratory Data Analysis", "Data Visualization", "Machine Learning"
-      ],
-      verificationUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link"
+      description: "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
+      skills: ["Data Analysis", "Machine Learning", "Python", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"],
+      verifyUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link"
     },
     {
-      title: "Certificate in Teaching Business English ",
+      title: "Certificate in Teaching Business English",
       issuer: "Berlitz Egypt",
-      date: "2025",
       status: "Active",
-      description:
-        "This training enhanced both my language proficiency and my ability to communicate effectively in a professional environment.",
-      skills: [
-        "Business English Communication", "Professional Writing ", "Presentation Skills"
-      ],
-      verificationUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link"
-    },
-  ];
-
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case "Active":
-        return (
-          <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
-            <CheckCircle className="w-3 h-3 mr-1" /> Active
-          </Badge>
-        );
-      case "Renewing":
-        return (
-          <Badge className="bg-yellow-500/10 text-yellow-500 border-yellow-500/20">
-            <Clock className="w-3 h-3 mr-1" /> Renewing
-          </Badge>
-        );
-      case "Expired":
-        return (
-          <Badge variant="destructive" className="bg-red-500/10 text-red-500 border-red-500/20">
-            Expired
-          </Badge>
-        );
-      default:
-        return <Badge variant="secondary">{status}</Badge>;
+      year: "2025",
+      credentialId: "",
+      description: "This training enhanced both my language proficiency and my ability to communicate effectively in a professional environment.",
+      skills: ["Business English Communication", "Professional Writing", "Presentation Skills"],
+      verifyUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link"
     }
-  };
+  ]
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
-        <div className="py-24 px-6">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Professional Certifications
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Validated expertise through industry-recognized certifications and continuous professional development
-              </p>
-            </div>
+    <section id="certifications" className="py-20">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Professional Certifications</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Validated expertise through industry-recognized certifications and continuous professional development
+          </p>
+        </div>
 
-            <div className="space-y-6">
-              {certifications.map((cert, index) => (
-                <Card key={index} className="p-6 md:p-8 shadow-lg rounded-2xl border-2 border-primary/40 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:border-primary">
-                  <div className="flex flex-col gap-6">
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                        <h3 className="text-xl md:text-2xl font-semibold">{cert.title}</h3>
-                        {getStatusBadge(cert.status)}
-                      </div>
-
-                      <div className="flex flex-col gap-2 mb-4 text-muted-foreground">
-                        <p className="text-primary font-medium">{cert.issuer}</p>
-                        <div className="flex items-center gap-2 text-sm">
-                          <CalendarDays className="w-4 h-4" />
-                          <span>Issued: {cert.date}</span>
-                        </div>
-                      </div>
-
-                      <p className="text-muted-foreground mb-6 leading-relaxed">{cert.description}</p>
-
-                      <div className="mb-6">
-                        <h4 className="font-semibold mb-3">Skills Validated</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {cert.skills.map((skill) => (
-                            <Badge key={skill} variant="outline">{skill}</Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col sm:flex-row gap-4 items-start">
-                        <div className="text-sm text-muted-foreground">
-                          <span className="font-medium">Credential ID:</span> {cert.credentialId}
-                        </div>
-
-                        {/* زر التحقق بالرابط */}
-                        <a
-                          href={cert.verificationUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 border rounded-md transition-all duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Verify Certificate
-                        </a>
-                      </div>
+        <div className="grid gap-8">
+          {certifications.map((cert, index) => (
+            <Card key={cert.title} className="p-8 bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary">
+              <div className="grid lg:grid-cols-4 gap-6">
+                {/* Certificate Icon & Status */}
+                <div className="flex flex-col items-center lg:items-start space-y-4">
+                  <div className="p-4 rounded-full bg-primary/20">
+                    <Award className="w-10 h-10 text-primary" />
+                  </div>
+                  <div className="text-center lg:text-left">
+                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full font-medium">
+                      {cert.status}
+                    </span>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
+                      <Calendar className="w-4 h-4" />
+                      Issued: {cert.year}
                     </div>
                   </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-};
+                </div>
 
-export default Certifications;
+                {/* Certificate Details */}
+                <div className="lg:col-span-3 space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 bg-hero-gradient bg-clip-text text-transparent">
+                      {cert.title}
+                    </h3>
+                    <p className="text-lg text-foreground mb-1">{cert.issuer}</p>
+                    {cert.credentialId && (
+                      <p className="text-sm text-muted-foreground">
+                        Credential ID: {cert.credentialId}
+                      </p>
+                    )}
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    {cert.description}
+                  </p>
+
+                  {/* Skills Validated */}
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Skills Validated</h4>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {cert.skills.map((skill, skillIndex) => (
+                        <span key={skillIndex} className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Verify Certificate Button */}
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={cert.verifyUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Verify Certificate
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
