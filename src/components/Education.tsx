@@ -6,7 +6,7 @@ export const Education = () => {
     <section id="education" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Education</h2>
+          <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Education</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my academic journey - building a strong foundation in computer science and IT.
           </p>
@@ -18,7 +18,7 @@ export const Education = () => {
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/lovable-uploads/b26b1f02-cb7d-4d35-864b-e97d713cc206.png"
+                  src="https://th.bing.com/th/id/OIP.diW4frs-ufHVTBJ1vNbFGQHaE1?w=250&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
                   alt="Helwan National University Campus"
                   className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -29,7 +29,7 @@ export const Education = () => {
             {/* Education Details */}
             <div className="order-1 lg:order-2 space-y-6">
               <div>
-                <h3 className="text-2xl font-bold mb-2 bg-hero-gradient bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                   Helwan National University
                 </h3>
                 <p className="text-lg text-foreground mb-4">Computer Science & Information Technology</p>
