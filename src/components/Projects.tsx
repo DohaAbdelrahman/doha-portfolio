@@ -10,37 +10,44 @@ const Projects = () => {
   const projects = [
     {
       title: "Job Management System",
-      description: ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
-          Key Features:
-          • User Authentication (Clients & Freelancers)  
-          • Job Posting & Applications  
-          • Client Management & Notifications  
-         `,
+      description: "This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.",
+      keyFeatures: [
+        "User Authentication (Clients & Freelancers)",
+        "Job Posting & Applications", 
+        "Client Management & Notifications"
+      ],
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      image: "https://www.bing.com/th/id/OIP.DJWgxvYRReMosFo4SJaEagHaD4?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image: "/lovable-uploads/464c8acf-c74f-47dc-9821-6c877f354052.png",
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#"
     },
     {
-      title: "Hotel Booking Cancellation Prediction System",
-      description:
-        "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
+      title: "Hotel Booking Cancellation Prediction System", 
+      description: "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
+      keyFeatures: [
+        "Machine Learning Prediction Models",
+        "Real-time Data Processing",
+        "Interactive Dashboard with Streamlit"
+      ],
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image: "/lovable-uploads/464c8acf-c74f-47dc-9821-6c877f354052.png",
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#"
     },
     {
       title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
-      description: `Analyze market data to uncover trends, seasonal patterns & product performance.  
-          🔹 What we did:  
-          • Cleaned 365,000+ records  
-          • EDA with Python (Pandas, Seaborn)  
-          • Normalized data to 3NF (SQL)  
-          • Interactive Dashboards (Power BI)  
-          • Random Forest for Sales Prediction  
-      `,
+      description: "Analyze market data to uncover trends, seasonal patterns & product performance. Cleaned 365,000+ records, performed EDA with Python, normalized data to 3NF (SQL), created interactive dashboards, and implemented Random Forest for sales prediction.",
+      keyFeatures: [
+        "Cleaned 365,000+ records",
+        "EDA with Python (Pandas, Seaborn)", 
+        "Normalized data to 3NF (SQL)",
+        "Interactive Dashboards (Power BI)",
+        "Random Forest for Sales Prediction"
+      ],
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
-      image: "https://www.bing.com/th/id/OIP.PmrqeWwi2QglSauMYIanhwHaE8?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image: "/lovable-uploads/464c8acf-c74f-47dc-9821-6c877f354052.png", 
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#"
     },
   ];
 
@@ -59,7 +66,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -68,9 +75,9 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group overflow-hidden">
-                {/* Large Project Image */}
-                <div className="w-full h-48 md:h-60 overflow-hidden">
+              <Card className="h-full bg-card/90 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(147,51,234,0.35)] group overflow-hidden">
+                {/* Project Image */}
+                <div className="w-full h-48 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -79,24 +86,34 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <CardHeader>
-                  <CardTitle className="text-2xl text-primary group-hover:text-primary-glow transition-colors">
+                <div className="p-6 flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {project.title}
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground whitespace-pre-line">
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  {/* Key Features */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {project.keyFeatures.map((feature, idx) => (
+                        <li key={idx} className="text-xs text-muted-foreground flex items-start">
+                          <span className="text-primary mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Technology Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                     {project.technologies.map((tech) => (
                       <Badge
                         key={tech}
-                        variant="secondary"
-                        className="bg-secondary/50 text-xs"
+                        className="bg-primary/20 text-primary border-primary/30 text-xs px-2 py-1"
                       >
                         {tech}
                       </Badge>
@@ -104,10 +121,11 @@ const Projects = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-3 pt-3">
+                  <div className="flex gap-3">
                     <Button
                       size="sm"
-                      className="bg-primary/90 text-white hover:bg-primary glow-sm transition-all"
+                      variant="outline"
+                      className="flex-1 border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary text-xs"
                       asChild
                     >
                       <a
@@ -115,24 +133,23 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github className="h-4 w-4 mr-2" />
+                        <Github className="h-3 w-3 mr-2" />
                         View Code
                       </a>
                     </Button>
 
                     <Button
                       size="sm"
-                      variant="outline"
-                      className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 text-xs"
                       asChild
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-3 w-3 mr-2" />
                         Live Demo
                       </a>
                     </Button>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </motion.div>
           ))}
