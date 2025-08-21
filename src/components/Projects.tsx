@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
@@ -9,41 +9,51 @@ const Projects = () => {
   const projects = [
     {
       title: "Job Management System",
-      description: ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
-          Key Features:
-          • User Authentication (Clients & Freelancers)  
-          • Job Posting & Applications  
-          • Client Management & Notifications  
-         `,
+      description:
+        "This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.",
+      keyFeatures: [
+        "User Authentication (Clients & Freelancers)",
+        "Job Posting & Applications",
+        "Client Management & Notifications",
+      ],
       technologies: ["Python", "JSON", "Google Cloud Console"],
       image:
         "https://www.bing.com/th/id/OIP.DJWgxvYRReMosFo4SJaEagHaD4?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#",
     },
     {
       title: "Hotel Booking Cancellation Prediction System",
       description:
         "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
+      keyFeatures: [
+        "Machine Learning Prediction Models",
+        "Real-time Data Processing",
+        "Interactive Dashboard with Streamlit",
+      ],
       technologies: ["Python", "Machine Learning", "Streamlit"],
       image:
         "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#",
     },
     {
       title:
         "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
-      description: `Analyze market data to uncover trends, seasonal patterns & product performance.  
-          🔹 What we did:  
-          • Cleaned 365,000+ records  
-          • EDA with Python (Pandas, Seaborn)  
-          • Normalized data to 3NF (SQL)  
-          • Interactive Dashboards (Power BI)  
-          • Random Forest for Sales Prediction  
-      `,
+      description:
+        "Analyze market data to uncover trends, seasonal patterns & product performance. Cleaned 365,000+ records, performed EDA with Python, normalized data to 3NF (SQL), created interactive dashboards, and implemented Random Forest for sales prediction.",
+      keyFeatures: [
+        "Cleaned 365,000+ records",
+        "EDA with Python (Pandas, Seaborn)",
+        "Normalized data to 3NF (SQL)",
+        "Interactive Dashboards (Power BI)",
+        "Random Forest for Sales Prediction",
+      ],
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
       image:
         "https://www.bing.com/th/id/OIP.PmrqeWwi2QglSauMYIanhwHaE8?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
+      demoUrl: "#",
     },
   ];
 
@@ -71,7 +81,7 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 group">
+              <Card className="overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
                 {/* Project Image + Overlay */}
                 <div className="relative w-full h-48 md:h-60 overflow-hidden">
                   <img
@@ -83,19 +93,35 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <CardHeader>
-                  <CardTitle className="text-2xl text-primary">
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-2xl font-bold text-primary mb-3">
                     {project.title}
-                  </CardTitle>
-                </CardHeader>
+                  </h3>
 
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground whitespace-pre-line">
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  {/* Key Features */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-foreground mb-2">
+                      Key Features:
+                    </h4>
+                    <ul className="space-y-1">
+                      {project.keyFeatures.map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className="text-xs text-muted-foreground flex items-start"
+                        >
+                          <span className="text-primary mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Technology Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -107,10 +133,10 @@ const Projects = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-3 pt-3">
+                  <div className="flex gap-3">
                     <Button
                       size="sm"
-                      className="bg-primary text-white hover:bg-primary/90"
+                      className="flex-1 bg-primary text-white hover:bg-primary/90"
                       asChild
                     >
                       <a
@@ -126,16 +152,20 @@ const Projects = () => {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                      className="flex-1 border-primary text-primary hover:bg-primary/10"
                       asChild
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </a>
                     </Button>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </motion.div>
           ))}
