@@ -5,8 +5,8 @@ export const Education = () => {
   return (
     <section id="education" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="text-4xl md:text-5xl font-bold mb-6">
-          <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Education</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text text-transparent">Education</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my academic journey - building a strong foundation in computer science and IT..
           </p>
