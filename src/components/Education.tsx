@@ -8,7 +8,7 @@ export const Education = () => {
         <div className="text-center mb-16">
           <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Education</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my academic journey - building a strong foundation in computer science and IT.
+            A showcase of my academic journey - building a strong foundation in computer science and IT..
           </p>
         </div>
 
