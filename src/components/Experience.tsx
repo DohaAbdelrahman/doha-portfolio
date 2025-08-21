@@ -47,6 +47,58 @@ const Experience = () => {
         "Gained strong understanding of supervised and unsupervised learning techniques",
       ],
     },
+    {
+      title: "Data Science Scholarship",
+      company: "ALX Africa",
+      location: "Cairo, Egypt",
+      period: "May 2025 - Present",
+      type: "Remote",
+      description:
+        "Wrote Python code for data analysis and machine learning at ALX Africa. Worked with teammates on real projects to improve my skills. Connected with tech professionals across Africa to learn and grow.",
+      technologies: [
+        "Python",
+        "Preparing Data",
+        "SQL",
+        "Data Analysis",
+        "Data Visualization",
+        "ML",
+        "Regression",
+        "NLP",
+        "AWS Foundations",
+      ],
+      achievements: [
+        "Professional Foundations: learned leadership and professional skills for workplace success",
+        "Machine Learning: understood algorithms to build predictive, data-driven models",
+        "AWS Cloud Practitioner: gained basic AWS and cloud computing knowledge for career start",
+      ],
+    },
+    {
+      title: "Google Data Analysis Scholarship",
+      company: "Digital Egypt Pioneers Initiative - DEPI",
+      location: "Cairo, Egypt",
+      period: "Nov 2024 - May 2025",
+      type: "Hybrid",
+      description:
+        "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
+      technologies: [
+        "Excel",
+        "Python",
+        "Data Analysis",
+        "SQL",
+        "Tableau",
+        "Power BI",
+        "Data Cleaning",
+        "Exploratory Data Analysis",
+        "Data Visualization",
+        "Machine Learning",
+      ],
+      achievements: [
+        "Analyzed large datasets to identify trends and patterns",
+        "Created comprehensive reports and visualizations",
+        "Collaborated with cross-functional teams to drive data-driven decisions",
+        "Utilized statistical methods to extract meaningful insights",
+      ],
+    },
   ];
 
   const getBadgeColor = (type) => {
@@ -76,6 +128,14 @@ const Experience = () => {
         return "bg-orange-500 text-white";
       case "Keras":
         return "bg-pink-500 text-white";
+      case "Excel":
+        return "bg-green-400 text-white";
+      case "SQL":
+        return "bg-blue-500 text-white";
+      case "Tableau":
+        return "bg-orange-400 text-white";
+      case "Power BI":
+        return "bg-yellow-500 text-black";
       default:
         return "bg-gray-300 text-black";
     }
