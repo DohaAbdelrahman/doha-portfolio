@@ -10,46 +10,37 @@ const Projects = () => {
   const projects = [
     {
       title: "Job Management System",
-      description: ` This project is a freelance job board system that allows clients to post job offers and freelancers to apply for them. The system is built using Python and stores data using JSON files instead of a database.
-          Key Features:
-          • User Authentication (Clients & Freelancers)  
-          • Job Posting & Applications  
-          • Client Management & Notifications  
-         `,
+      description: `Freelance job board system that allows clients to post job offers and freelancers to apply for them. Built with Python and JSON files instead of a database.`,
       technologies: ["Python", "JSON", "Google Cloud Console"],
-      image: "https://www.bing.com/th/id/OIP.DJWgxvYRReMosFo4SJaEagHaD4?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image:
+        "https://www.bing.com/th/id/OIP.DJWgxvYRReMosFo4SJaEagHaD4?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "Hotel Booking Cancellation Prediction System",
+      title: "Hotel Booking Cancellation Prediction",
       description:
-        "The hospitality industry faces a huge challenge with booking cancellations that affect revenue, occupancy rates, and customer satisfaction. We developed a machine learning solution to predict cancellations using historical and real-time data.",
+        "Machine learning solution to predict booking cancellations using historical and real-time data to help hotels optimize revenue and occupancy.",
       technologies: ["Python", "Machine Learning", "Streamlit"],
-      image: "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image:
+        "https://www.bing.com/th/id/OIP.wWML5tVtceiuLrj-tl7zhQHaDt?w=284&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
     {
-      title: "Exploratory Data Analysis and Machine Learning for Turkish Market Sales",
-      description: `Analyze market data to uncover trends, seasonal patterns & product performance.  
-          🔹 What we did:  
-          • Cleaned 365,000+ records  
-          • EDA with Python (Pandas, Seaborn)  
-          • Normalized data to 3NF (SQL)  
-          • Interactive Dashboards (Power BI)  
-          • Random Forest for Sales Prediction  
-      `,
+      title: "EDA & ML for Turkish Market Sales",
+      description: `Analyzed 365k+ market records, performed EDA, normalized data (SQL), built Power BI dashboards, and applied Random Forest for sales prediction.`,
       technologies: ["Python", "SQL", "EDA", "Machine Learning", "Power BI"],
-      image: "https://www.bing.com/th/id/OIP.PmrqeWwi2QglSauMYIanhwHaE8?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      image:
+        "https://www.bing.com/th/id/OIP.PmrqeWwi2QglSauMYIanhwHaE8?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       githubUrl: "https://github.com/DohaAbdelrahman",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-20 px-6 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
             My Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -59,7 +50,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -68,25 +59,26 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="relative bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)] hover:scale-[1.03] group overflow-hidden">
-                {/* Large Project Image */}
-                <div className="w-full h-48 md:h-60 overflow-hidden">
+              <Card className="relative shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden rounded-2xl">
+                {/* Project Image with overlay */}
+                <div className="relative w-full h-48 md:h-56 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 {/* Content */}
                 <CardHeader>
-                  <CardTitle className="text-2xl text-primary group-hover:text-primary-glow transition-colors">
+                  <CardTitle className="text-xl font-semibold text-foreground group-hover:text-purple-600 transition-colors">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground whitespace-pre-line">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -95,8 +87,7 @@ const Projects = () => {
                     {project.technologies.map((tech) => (
                       <Badge
                         key={tech}
-                        variant="secondary"
-                        className="bg-secondary/50 text-xs"
+                        className="bg-purple-100 text-purple-700 text-xs hover:bg-purple-200 transition-colors"
                       >
                         {tech}
                       </Badge>
@@ -107,7 +98,7 @@ const Projects = () => {
                   <div className="flex gap-3 pt-3">
                     <Button
                       size="sm"
-                      className="bg-primary/90 text-white hover:bg-primary glow-sm transition-all"
+                      className="flex-1 bg-purple-600 text-white hover:bg-purple-700 transition-colors"
                       asChild
                     >
                       <a
@@ -116,19 +107,19 @@ const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <Github className="h-4 w-4 mr-2" />
-                        View Code
+                        Code
                       </a>
                     </Button>
 
                     <Button
                       size="sm"
                       variant="outline"
-                      className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                      className="flex-1 border-purple-300 hover:border-purple-600 hover:bg-purple-50"
                       asChild
                     >
                       <a href="#" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
+                        Live
                       </a>
                     </Button>
                   </div>
@@ -136,6 +127,25 @@ const Projects = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        {/* View More Projects Button */}
+        <div className="text-center mt-12">
+          <Button
+            size="lg"
+            variant="outline"
+            className="hover:bg-purple-600 hover:text-white transition-colors"
+            asChild
+          >
+            <a
+              href="https://github.com/DohaAbdelrahman"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-5 h-5 mr-2" />
+              View All Projects on GitHub
+            </a>
+          </Button>
         </div>
       </div>
     </section>
