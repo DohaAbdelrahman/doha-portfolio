@@ -40,7 +40,20 @@ export const Hero = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Get In Touch
               </Button>
-              <Button variant="outline" className="border-primary/30 hover:bg-primary/10">
+              <Button 
+                variant="outline" 
+                className="border-primary/30 hover:bg-primary/10"
+                onClick={() => {
+                  // You can replace this URL with your actual CV file
+                  const cvUrl = "/path-to-your-cv.pdf"; // Update this with your CV file path
+                  const link = document.createElement('a');
+                  link.href = cvUrl;
+                  link.download = 'Doha_Abdelrahman_CV.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <span className="mr-2">📄</span>
                 Download CV
               </Button>
@@ -71,9 +84,11 @@ export const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="relative">
               <div className="w-80 h-80 rounded-full bg-gradient-primary p-1 animate-glow">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-primary-glow/5 flex items-center justify-center">
-                  <div className="text-8xl font-bold bg-gradient-text bg-clip-text text-transparent">DA</div>
-                </div>
+                <img 
+                  src="/lovable-uploads/121f87dd-0ca8-40da-96e8-2f5fb7ca5fe7.png" 
+                  alt="Doha Abdelrahman - Data Scientist"
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               {/* Floating elements around image */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-lg animate-float opacity-80"></div>
