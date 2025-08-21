@@ -137,7 +137,7 @@ const Experience = () => {
       case "Power BI":
         return "bg-yellow-500 text-black";
       default:
-        return "bg-gray-300 text-black";
+        return "bg-red-300 text-black";
     }
   };
 
