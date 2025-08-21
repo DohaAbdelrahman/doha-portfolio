@@ -6,7 +6,7 @@ export const Education = () => {
     <section id="education" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Education</h2>
+          <h2 className="text-6xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Education</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my academic journey - building a strong foundation in computer science and IT..
           </p>
