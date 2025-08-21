@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Certifications from "@/components/Certifications";
+import { Certifications } from "@/components/Certifications";
 import Footer from "@/components/Footer";
 
 const CertificationsPage = () => {

@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card"
 import { Calendar, MapPin, BookOpen } from "lucide-react"
-import helwanUniversity from "@/assets/helwan-university.jpg"
 
 export const Education = () => {
   return (
@@ -19,7 +18,7 @@ export const Education = () => {
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src={helwanUniversity}
+                  src="/lovable-uploads/b26b1f02-cb7d-4d35-864b-e97d713cc206.png"
                   alt="Helwan National University Campus"
                   className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                 />

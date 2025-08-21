@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Education from "@/components/Education";
+import { Education } from "@/components/Education";
 import Footer from "@/components/Footer";
 
 const EducationPage = () => {
