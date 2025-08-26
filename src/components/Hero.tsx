@@ -45,7 +45,7 @@ export const Hero = () => {
                 className="border-primary/30 hover:bg-primary/10"
                 onClick={() => {
                   // You can replace this URL with your actual CV file
-                  const cvUrl = "https://drive.google.com/file/d/113cfI8rJr3tEr31mKFi845Gz7FRetrB8/view?usp=drive_link"; // Update this with your CV file path
+                  const cvUrl = "https://drive.google.com/file/d/1DY-qZXrARUREa2j51NQTWUM9DxSbmrzV/view?usp=drive_link"; // Update this with your CV file path
                   const link = document.createElement('a');
                   link.href = cvUrl;
                   link.download = 'Doha_Abdelrahman_CV.pdf';
