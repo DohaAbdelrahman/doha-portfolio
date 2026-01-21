@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, AlertTriangle } from "lucide-react";
 const Contact = () => {
   const contactInfo = [{
     icon: Mail,
@@ -53,8 +53,8 @@ const Contact = () => {
             }}>
                   <CardContent className="p-5 bg-inherit text-inherit">
                     <a href={item.link} className="flex items-center gap-4 group">
-                      <div className="p-3 rounded-xl transition-colors bg-inherit border-inherit text-inherit">
-                        <item.icon className="h-6 w-6 text-[#977359] bg-primary-foreground border-primary-foreground" />
+                      <div className="p-3 rounded-xl transition-colors border-inherit text-primary bg-inherit">
+                        <item.icon className="h-6 w-6 text-primary-foreground bg-primary-foreground border-destructive-foreground" />
                       </div>
                       <div>
                         <h4 className="font-semibold transition-colors text-primary">
