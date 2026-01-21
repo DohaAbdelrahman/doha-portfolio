@@ -34,18 +34,19 @@ export const Hero = () => {
             </div>
             
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight whitespace-nowrap">
                 <TypeAnimation
                   sequence={[
                     'Doha Abdelrahman',
-                    2000,
+                    2500,
                     '',
-                    500,
+                    800,
                   ]}
                   wrapper="span"
-                  speed={50}
-                  deletionSpeed={40}
+                  speed={30}
+                  deletionSpeed={25}
                   repeat={Infinity}
+                  cursor={true}
                 />
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
