@@ -81,7 +81,7 @@ export const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-slide-up" style={{
+          <div className="justify-center lg:justify-end animate-slide-up flex flex-row" style={{
           animationDelay: '0.2s'
         }}>
             <div className="relative">
