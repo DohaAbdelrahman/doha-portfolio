@@ -51,16 +51,16 @@ const Contact = () => {
               {contactInfo.map((item, index) => <Card key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" style={{
               animationDelay: `${index * 0.1}s`
             }}>
-                  <CardContent className="p-5 bg-inherit text-inherit">
+                  <CardContent className="p-5 text-primary bg-inherit border-inherit">
                     <a href={item.link} className="flex items-center gap-4 group">
                       <div className="p-3 rounded-xl transition-colors bg-inherit text-primary border-primary-glow">
                         <item.icon className="h-6 w-6 text-[#977359] bg-inherit" />
                       </div>
                       <div>
-                        <h4 className="font-semibold transition-colors text-primary">
+                        <h4 className="transition-colors text-primary text-lg font-bold">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-muted-foreground">{item.value}</p>
+                        <p className="text-muted-foreground text-base font-medium">{item.value}</p>
                       </div>
                     </a>
                   </CardContent>
