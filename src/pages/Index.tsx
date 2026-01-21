@@ -34,7 +34,7 @@ const Index = () => {
           <Projects />
         </div>
         <div id="contact">
-          <Contact className="" />
+          <Contact className="text-primary-glow" />
         </div>
         
       </main>
