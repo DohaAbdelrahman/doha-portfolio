@@ -53,8 +53,8 @@ const Contact = () => {
             }}>
                   <CardContent className="p-5 bg-inherit text-inherit">
                     <a href={item.link} className="flex items-center gap-4 group">
-                      <div className="p-3 rounded-xl transition-colors text-primary bg-inherit border-inherit border-none">
-                        <item.icon className="h-6 w-6 text-primary-foreground bg-primary-foreground border-destructive-foreground" />
+                      <div className="p-3 rounded-xl transition-colors bg-inherit border-inherit border-none text-primary">
+                        <item.icon className="h-6 w-6 text-primary-foreground bg-primary-foreground border-[#977359]" />
                       </div>
                       <div>
                         <h4 className="font-semibold transition-colors text-primary">
