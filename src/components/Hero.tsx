@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { TypeAnimation } from 'react-type-animation';
 export const Hero = () => {
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Floating geometric elements */}
@@ -34,7 +35,18 @@ export const Hero = () => {
             
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight">
-                Doha Abdelrahman
+                <TypeAnimation
+                  sequence={[
+                    'Doha Abdelrahman',
+                    2000,
+                    '',
+                    500,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  deletionSpeed={40}
+                  repeat={Infinity}
+                />
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
                 Turning data into insights with machine learning, analytics, and 
