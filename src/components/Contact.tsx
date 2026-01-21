@@ -1,46 +1,35 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
-
 const Contact = () => {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      value: "dohaabd757@dmail.com",
-      link: "mailto:dohaabd757@dmail.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "01029474155",
-      link: "tel:01029474155"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      value: "Al-Manib, Al-Giza",
-      link: "#"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      name: "GitHub",
-      url: "https://github.com/DohaAbdelrahman"
-    },
-    {
-      icon: Linkedin,
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/doha-abdelrahman-3540292a5"
-    }
-  ];
-
-  return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-black via-[#0f0f1b] to-[#1a1a2e]">
+  const contactInfo = [{
+    icon: Mail,
+    title: "Email",
+    value: "dohaabd757@dmail.com",
+    link: "mailto:dohaabd757@dmail.com"
+  }, {
+    icon: Phone,
+    title: "Phone",
+    value: "01029474155",
+    link: "tel:01029474155"
+  }, {
+    icon: MapPin,
+    title: "Location",
+    value: "Al-Manib, Al-Giza",
+    link: "#"
+  }];
+  const socialLinks = [{
+    icon: Github,
+    name: "GitHub",
+    url: "https://github.com/DohaAbdelrahman"
+  }, {
+    icon: Linkedin,
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/doha-abdelrahman-3540292a5"
+  }];
+  return <section id="contact" className="py-20 px-6 bg-gradient-to-br from-black via-[#0f0f1b] to-[#1a1a2e]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-primary bg-primary-foreground">
             Let's Work Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -59,17 +48,11 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <Card
-                  key={index}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              {contactInfo.map((item, index) => <Card key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <CardContent className="p-5">
-                    <a
-                      href={item.link}
-                      className="flex items-center gap-4 group"
-                    >
+                    <a href={item.link} className="flex items-center gap-4 group">
                       <div className="p-3 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors">
                         <item.icon className="h-6 w-6 text-purple-400" />
                       </div>
@@ -81,8 +64,7 @@ const Contact = () => {
                       </div>
                     </a>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -91,25 +73,16 @@ const Contact = () => {
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md p-6">
               <h4 className="text-xl font-semibold text-purple-300 mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition duration-300 hover:scale-110"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
+                {socialLinks.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition duration-300 hover:scale-110" style={{
+                animationDelay: `${index * 0.1}s`
+              }}>
                     <social.icon className="h-5 w-5 text-white" />
-                  </a>
-                ))}
+                  </a>)}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
