@@ -8,11 +8,8 @@ import { Certifications } from "@/components/Certifications";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       <main>
         <div id="hero">
@@ -31,19 +28,17 @@ const Index = () => {
           <Education />
         </div>
         <div id="certifications">
-          <Certifications/>
+          <Certifications />
         </div>
         <div id="projects">
           <Projects />
         </div>
         <div id="contact">
-          <Contact />
+          <Contact className="" />
         </div>
         
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

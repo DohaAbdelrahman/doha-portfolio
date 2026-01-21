@@ -27,7 +27,7 @@ const Contact = () => {
     url: "https://linkedin.com/in/doha-abdelrahman-3540292a5"
   }];
   return <section id="contact" className="py-20 px-6 bg-gradient-to-br from-black via-[#0f0f1b] to-[#1a1a2e]">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto bg-inherit text-primary border-primary">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-primary bg-primary-foreground">
             Let's Work Together
@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info Section */}
           <div className="space-y-6 animate-slide-up">
-            <h3 className="text-2xl font-bold mb-4 text-purple-400">Get in Touch</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">Get in Touch</h3>
             <p className="text-muted-foreground">
               Whether you have a project in mind, need technical consultation, or just want to say hello, 
               I'd love to hear from you. Let's create something amazing together!
@@ -51,13 +51,13 @@ const Contact = () => {
               {contactInfo.map((item, index) => <Card key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" style={{
               animationDelay: `${index * 0.1}s`
             }}>
-                  <CardContent className="p-5">
+                  <CardContent className="p-5 bg-inherit text-inherit">
                     <a href={item.link} className="flex items-center gap-4 group">
-                      <div className="p-3 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors">
-                        <item.icon className="h-6 w-6 text-purple-400" />
+                      <div className="p-3 rounded-xl transition-colors bg-inherit text-primary border-primary-glow">
+                        <item.icon className="h-6 w-6 text-[#977359] bg-primary" />
                       </div>
                       <div>
-                        <h4 className="text-white font-semibold group-hover:text-purple-300 transition-colors">
+                        <h4 className="font-semibold transition-colors text-primary">
                           {item.title}
                         </h4>
                         <p className="text-sm text-muted-foreground">{item.value}</p>
@@ -70,13 +70,13 @@ const Contact = () => {
 
           {/* Social Media Section */}
           <div className="flex flex-col justify-center animate-fade-in">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md p-6">
-              <h4 className="text-xl font-semibold text-purple-300 mb-4">Follow Me</h4>
+            <div className="backdrop-blur-md border border-white/10 rounded-xl shadow-md p-6 bg-inherit text-primary">
+              <h4 className="text-xl font-semibold mb-4 text-primary">Follow Me</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition duration-300 hover:scale-110" style={{
                 animationDelay: `${index * 0.1}s`
               }}>
-                    <social.icon className="h-5 w-5 text-white" />
+                    <social.icon className="h-5 w-5 text-[#977359]" />
                   </a>)}
               </div>
             </div>
