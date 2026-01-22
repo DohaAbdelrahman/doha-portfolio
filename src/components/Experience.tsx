@@ -41,15 +41,14 @@ const Experience = () => {
     achievements: ["Analyzed large datasets to identify trends and patterns", "Created comprehensive reports and visualizations", "Collaborated with cross-functional teams to drive data-driven decisions", "Utilized statistical methods to extract meaningful insights"]
   }];
   const getBadgeColor = type => {
-    switch (type) {
+    switch (type) 
+    {
       case "On-Site":
-        return "bg-green-500 text-white";
       case "Hybrid":
-        return "bg-blue-500 text-white";
       case "Remote":
-        return "bg-yellow-400 text-black";
+        return "bg-[#977359] text-white";
       default:
-        return "bg-gray-500 text-white";
+        return "bg-[#977359] text-white";
     }
   };
   const getTechColor = tech => {
