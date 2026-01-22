@@ -37,7 +37,7 @@ export const Certifications = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Certifications</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Validated expertise through industry-recognized certifications and continuous professional development
+            Certified expertise with continuous learning
           </p>
         </div>
 
