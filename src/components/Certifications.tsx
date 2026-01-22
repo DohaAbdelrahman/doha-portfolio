@@ -64,7 +64,7 @@ export const Certifications = () => {
                       {cert.title}
                     </h3>
 
-                    <p className="text-foreground mb-1 font-semibold text-xl">{cert.issuer}</p>
+                    <p className="mb-1 font-semibold text-xl text-primary-glow">{cert.issuer}</p>
                     {cert.credentialId && <p className="text-sm text-muted-foreground">
                         Credential ID: {cert.credentialId}
                       </p>}
