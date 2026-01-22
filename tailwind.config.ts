@@ -109,19 +109,24 @@ export default {
 					from: { boxShadow: '0 0 20px hsl(var(--primary) / 0.1)' },
 					to: { boxShadow: '0 0 40px hsl(var(--primary) / 0.3)' }
 				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
-				}
+			'float': {
+				'0%, 100%': { transform: 'translateY(0px)' },
+				'50%': { transform: 'translateY(-10px)' }
 			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-				'slide-up': 'slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-				'glow': 'glow 2s ease-in-out infinite alternate',
-				'float': 'float 3s ease-in-out infinite'
+			'cursor-blink': {
+				'0%, 100%': { opacity: '1' },
+				'50%': { opacity: '0' }
 			}
+		},
+		animation: {
+			'accordion-down': 'accordion-down 0.2s ease-out',
+			'accordion-up': 'accordion-up 0.2s ease-out',
+			'fade-in': 'fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+			'slide-up': 'slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+			'glow': 'glow 2s ease-in-out infinite alternate',
+			'float': 'float 3s ease-in-out infinite',
+			'cursor-blink': 'cursor-blink 1s step-end infinite'
+		}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

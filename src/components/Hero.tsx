@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
-import { TypeAnimation } from 'react-type-animation';
+import { TypewriterText } from "./TypewriterText";
+
 export const Hero = () => {
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Floating geometric elements */}
@@ -37,22 +38,14 @@ export const Hero = () => {
             </div>
             
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight whitespace-nowrap">
-                <TypeAnimation
-                  sequence={[
-                    'Doha Abdelrahman', // typing
-                    2000,               // wait after typing
-                    (el) => {
-                      el.textContent = '';
-                    },
-                    800,                // wait after deleting
-                  ]}
-                  wrapper="span"
-                  speed={60}            // typing speed (أبطأ)
-                  deletionSpeed={50}    // deleting speed (أبطأ)
-                  repeat={Infinity}
-                  cursor={true}
-                  style={{ display: 'inline-block' }}
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight whitespace-nowrap">
+                <TypewriterText
+                  text="Doha Abdelrahman"
+                  typingSpeed={100}
+                  deletingSpeed={60}
+                  pauseAfterTyping={2000}
+                  pauseAfterDeleting={800}
+                  className="bg-gradient-text bg-clip-text text-transparent"
                 />
               </h1>
 
