@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import WelcomeMessage from "@/components/WelcomeMessage";
 const Index = () => {
   return <div className="min-h-screen bg-background">
+      <WelcomeMessage />
       <Navigation />
       <main>
         <div id="hero">
