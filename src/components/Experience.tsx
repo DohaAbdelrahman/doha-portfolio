@@ -60,7 +60,7 @@ const Experience = () => {
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">
-                  Professional Experience
+                  Experience
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -105,7 +105,7 @@ const Experience = () => {
 
                     <div>
                       <h4 className="font-semibold mb-3">Technologies Used</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium transition-colors hover:bg-primary/30">
                         {exp.technologies.map(tech => <Badge key={tech} className={getTechColor(tech)}>
                             {tech}
                           </Badge>)}

@@ -32,7 +32,7 @@ export const Certifications = () => {
   return <section id="certifications" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Professional Certifications</h2>
+          <h2 className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Certifications</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Validated expertise through industry-recognized certifications and continuous professional development
           </p>
