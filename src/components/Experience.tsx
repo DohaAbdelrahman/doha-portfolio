@@ -41,8 +41,7 @@ const Experience = () => {
     achievements: ["Analyzed large datasets to identify trends and patterns", "Created comprehensive reports and visualizations", "Collaborated with cross-functional teams to drive data-driven decisions", "Utilized statistical methods to extract meaningful insights"]
   }];
   const getBadgeColor = type => {
-    switch (type) 
-    {
+    switch (type) {
       case "On-Site":
       case "Hybrid":
       case "Remote":
@@ -58,8 +57,8 @@ const Experience = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">
-                  Experience
+                <span className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary text-5xl font-bold">
+                  Professional Experience
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -105,11 +104,9 @@ const Experience = () => {
                     <div>
                       <h4 className="font-semibold mb-3">Technologies Used</h4>
                       <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, techIndex) => (
-                          <span key={techIndex} className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium transition-colors hover:bg-primary/30">
+                        {exp.technologies.map((tech, techIndex) => <span key={techIndex} className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full font-medium transition-colors hover:bg-primary/30">
                             {tech}
-                          </span>
-                        ))}
+                          </span>)}
                       </div>
                     </div>
                   </div>
