@@ -2,7 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, Award } from "lucide-react";
 export const Certifications = () => {
-  const certifications = [{
+  const certifications = [
+    {
     title: "Google Data Analysts Scholarship",
     issuer: "Digital Egypt Pioneers Initiative - DEPI",
     status: "Active",
@@ -11,7 +12,8 @@ export const Certifications = () => {
     description: "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
     skills: ["Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
     verifyUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link"
-  }, {
+  }, 
+  {
     title: "Huawei ICT Academy – Artificial Intelligence Scholarship",
     issuer: "Huawei ICT Academy-Egypt",
     status: "Active",
@@ -20,7 +22,8 @@ export const Certifications = () => {
     description: "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
     skills: ["Data Analysis", "Machine Learning", "Python", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"],
     verifyUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link"
-  }, {
+  }, 
+  {
     title: "Certificate in Teaching Business English",
     issuer: "Berlitz Egypt",
     status: "Active",
@@ -32,7 +35,7 @@ export const Certifications = () => {
   return <section id="certifications" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Professional Certifications</h2>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Certifications</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Validated expertise through industry-recognized certifications and continuous professional development
           </p>

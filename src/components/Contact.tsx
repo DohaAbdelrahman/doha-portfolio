@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto bg-inherit text-primary border-primary">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-primary bg-primary-foreground">
-            Let's Work Together
+            Contact Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Ready to bring your ideas to life? I'm always open to discussing new opportunities 
