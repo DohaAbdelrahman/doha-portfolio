@@ -15,7 +15,7 @@ export const Education = () => {
             {/* University Image */}
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-xl">
-                <img src="https://th.bing.com/th/id/OIP.diW4frs-ufHVTBJ1vNbFGQHaE1?w=250&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Helwan National University Campus" className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105" />
+                <img src="https://i.postimg.cc/BnPzk8kX/image.png" alt="Helwan National University Campus" className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105" />
                 <div className="absolute inset-0 bg-hero-gradient opacity-20"></div>
               </div>
             </div>
