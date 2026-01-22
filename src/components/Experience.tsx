@@ -51,38 +51,7 @@ const Experience = () => {
         return "bg-[#977359] text-white";
     }
   };
-  const getTechColor = tech => {
-    switch (tech) {
-      case "C#":
-        return "bg-purple-500 text-white";
-      case "SQL Server":
-        return "bg-blue-600 text-white";
-      case "ASP.Net":
-        return "bg-green-500 text-white";
-      case "Python":
-        return "bg-yellow-400 text-black";
-      case "TensorFlow":
-        return "bg-orange-500 text-white";
-      case "Keras":
-        return "bg-pink-500 text-white";
-      case "Excel":
-        return "bg-green-400 text-white";
-      case "SQL":
-        return "bg-blue-500 text-white";
-      case "Tableau":
-        return "bg-orange-400 text-white";
-      case "Power BI":
-        return "bg-yellow-500 text-black";
-      case "Data Cleaning":
-        return "bg-red-300 text-black";
-      case "Data Visualization":
-        return "bg-red-300 text-black";
-      case "Data Analysis":
-        return "bg-red-300 text-black";
-      default:
-        return "bg-gray-300 text-black";
-    }
-  };
+  const getTechColor = () => "bg-[#977359] text-white";
   return <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
