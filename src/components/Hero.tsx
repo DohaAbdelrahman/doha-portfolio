@@ -40,18 +40,22 @@ export const Hero = () => {
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-text bg-clip-text text-transparent leading-tight whitespace-nowrap">
                 <TypeAnimation
                   sequence={[
-                    'Doha Abdelrahman',
-                    2500,
-                    '',
-                    800,
+                    'Doha Abdelrahman', // typing
+                    2000,               // wait after typing
+                    (el) => {
+                      el.textContent = '';
+                    },
+                    800,                // wait after deleting
                   ]}
                   wrapper="span"
-                  speed={30}
-                  deletionSpeed={25}
+                  speed={60}            // typing speed (أبطأ)
+                  deletionSpeed={50}    // deleting speed (أبطأ)
                   repeat={Infinity}
                   cursor={true}
+                  style={{ display: 'inline-block' }}
                 />
               </h1>
+
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
                 Turning data into insights with machine learning, analytics, and 
                 visualizations, I deliver impactful solutions that simplify 
