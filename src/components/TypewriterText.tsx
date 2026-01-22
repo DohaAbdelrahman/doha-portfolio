@@ -23,17 +23,14 @@ export const TypewriterText = ({
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
-
+  
     if (isPaused) {
       timeout = setTimeout(() => {
         setIsPaused(false);
-        if (isDeleting) {
-          setIsDeleting(false);
-        }
       }, isDeleting ? pauseAfterDeleting : pauseAfterTyping);
       return () => clearTimeout(timeout);
     }
-
+  
     if (!isDeleting) {
       // Typing
       if (displayText.length < text.length) {
@@ -41,7 +38,7 @@ export const TypewriterText = ({
           setDisplayText(text.slice(0, displayText.length + 1));
         }, typingSpeed);
       } else {
-        // Finished typing, pause before deleting
+        // Finished typing → start deleting
         setIsPaused(true);
         setIsDeleting(true);
       }
@@ -52,14 +49,24 @@ export const TypewriterText = ({
           setDisplayText(text.slice(0, displayText.length - 1));
         }, deletingSpeed);
       } else {
-        // Finished deleting, pause before typing again
+        // Finished deleting → start typing again
         setIsPaused(true);
+        setIsDeleting(false);
       }
     }
-
+  
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, isPaused, text, typingSpeed, deletingSpeed, pauseAfterTyping, pauseAfterDeleting]);
-
+  }, [
+    displayText,
+    isDeleting,
+    isPaused,
+    text,
+    typingSpeed,
+    deletingSpeed,
+    pauseAfterTyping,
+    pauseAfterDeleting
+  ]);
+  
   return (
     <span className={`${className} whitespace-nowrap`}>
       {displayText}
