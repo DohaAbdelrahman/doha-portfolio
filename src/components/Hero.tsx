@@ -29,7 +29,10 @@ export const Hero = () => {
           <div className="space-y-8 animate-slide-up">
             <div className="inline-block">
               <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
-                Data Scientist    
+                Data Scientist
+              </span>
+              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
+                ML Engineer
               </span>
             </div>
             
