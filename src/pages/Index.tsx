@@ -8,6 +8,7 @@ import { Certifications } from "@/components/Certifications";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WelcomeMessage from "@/components/WelcomeMessage";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
