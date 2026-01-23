@@ -32,10 +32,8 @@ export const Certifications = () => {
   return <section id="certifications" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary">Certifications</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Certified expertise with continuous learning
-          </p>
+          <h1 className="font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text bg-primary text-primary py-[10px] text-5xl">Certifications</h1>
+          
         </div>
 
         <div className="grid gap-8">

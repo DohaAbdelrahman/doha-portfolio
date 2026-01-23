@@ -34,11 +34,8 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent text-center md:text-6xl">Projects</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my programming projects, demonstrating expertise in
-            data analysis, algorithm design, and software development.
-          </p>
+          <h1 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent text-center md:text-5xl my-0 py-[10px]">Projects</h1>
+          
         </div>
 
         {/* Projects Grid */}

@@ -26,8 +26,7 @@ const Contact = () => {
     name: "LinkedIn",
     url: "https://linkedin.com/in/doha-abdelrahman-3540292a5"
   }];
-  return (
-    <section id="contact" className="py-20 px-6 bg-gradient-hero">
+  return <section id="contact" className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
@@ -49,12 +48,9 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <Card 
-                  key={index} 
-                  className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              {contactInfo.map((item, index) => <Card key={index} className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <CardContent className="p-5">
                     <a href={item.link} className="flex items-center gap-4 group">
                       <div className="p-3 rounded-xl bg-primary/10">
@@ -68,37 +64,27 @@ const Contact = () => {
                       </div>
                     </a>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
           {/* Social Media Section */}
-          <div className="flex flex-col justify-center animate-fade-in">
+          <div className="flex-col justify-center animate-fade-in flex">
             <Card className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary">
               <CardContent className="p-6">
                 <h4 className="text-xl font-semibold mb-4 bg-gradient-text bg-clip-text text-transparent">Follow Me</h4>
                 <div className="flex gap-4">
-                  {socialLinks.map((social, index) => (
-                    <a 
-                      key={index} 
-                      href={social.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition duration-300 hover:scale-110"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
+                  {socialLinks.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition duration-300 hover:scale-110" style={{
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <social.icon className="h-5 w-5 text-primary" />
-                    </a>
-                  ))}
+                    </a>)}
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
