@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, MapPin, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CalendarDays, MapPin, Building2, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
+
 const Experience = () => {
   const experiences = [{
     title: ".Net Development Scholarship",
@@ -11,7 +13,8 @@ const Experience = () => {
     type: "Remote",
     description: "Intensive training program focused on core concepts and practical applications of .NET development, C#, ASP.NET, and SQL Server. The program included hands-on projects, collaborative learning, and mentorship from industry professionals, equipping participants to build scalable and maintainable web and desktop applications.",
     technologies: ["C#", "SQL Server", "ASP.Net"],
-    achievements: ["Developed and deployed web and desktop applications using C# and ASP.NET", "Designed and implemented database-driven applications with SQL Server", "Collaborated in a team environment to build full-stack projects", "Gained strong understanding of software design patterns and best coding practices"]
+    achievements: ["Developed and deployed web and desktop applications using C# and ASP.NET", "Designed and implemented database-driven applications with SQL Server", "Collaborated in a team environment to build full-stack projects", "Gained strong understanding of software design patterns and best coding practices"],
+    verifyLink: "#"
   }, {
     title: "AI Scholarship",
     company: "NTI - National Telecommunication Institute",
@@ -20,7 +23,8 @@ const Experience = () => {
     type: "On-Site",
     description: "Intensive training program focused on core concepts and practical applications of Artificial Intelligence, Machine Learning, and Deep Learning. The program included hands-on projects, collaborative learning, and mentorship from industry professionals.",
     technologies: ["Python", "Scikit-learn", "Pandas", "TensorFlow", "Keras", "NumPy", "Jupyter Notebooks", "Matplotlib", "Seaborn"],
-    achievements: ["Built and deployed machine learning models for real-world datasets", "Completed a capstone project applying deep learning to image classification", "Collaborated in a team environment to solve AI-driven problems", "Gained strong understanding of supervised and unsupervised learning techniques"]
+    achievements: ["Built and deployed machine learning models for real-world datasets", "Completed a capstone project applying deep learning to image classification", "Collaborated in a team environment to solve AI-driven problems", "Gained strong understanding of supervised and unsupervised learning techniques"],
+    verifyLink: "#"
   }, {
     title: "Data Science Scholarship",
     company: "ALX Africa",
@@ -29,7 +33,8 @@ const Experience = () => {
     type: "Remote",
     description: "Wrote Python code for data analysis and machine learning at ALX Africa. Worked with teammates on real projects to improve my skills. Connected with tech professionals across Africa to learn and grow.",
     technologies: ["Python", "Preparing Data", "SQL", "Data Analysis", "Data Visualization", "ML", "Regression", "NLP", "AWS Foundations"],
-    achievements: ["Professional Foundations: learned leadership and professional skills for workplace success", "Machine Learning: understood algorithms to build predictive, data-driven models", "AWS Cloud Practitioner: gained basic AWS and cloud computing knowledge for career start"]
+    achievements: ["Professional Foundations: learned leadership and professional skills for workplace success", "Machine Learning: understood algorithms to build predictive, data-driven models", "AWS Cloud Practitioner: gained basic AWS and cloud computing knowledge for career start"],
+    verifyLink: "#"
   }, {
     title: "Google Data Analysis Scholarship",
     company: "Digital Egypt Pioneers Initiative - DEPI",
@@ -38,7 +43,8 @@ const Experience = () => {
     type: "Hybrid",
     description: "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
     technologies: ["Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
-    achievements: ["Analyzed large datasets to identify trends and patterns", "Created comprehensive reports and visualizations", "Collaborated with cross-functional teams to drive data-driven decisions", "Utilized statistical methods to extract meaningful insights"]
+    achievements: ["Analyzed large datasets to identify trends and patterns", "Created comprehensive reports and visualizations", "Collaborated with cross-functional teams to drive data-driven decisions", "Utilized statistical methods to extract meaningful insights"],
+    verifyLink: "#"
   }];
   const getBadgeColor = type => {
     switch (type) {
@@ -68,8 +74,23 @@ Experience
             </div>
 
             <div className="space-y-8">
-              {experiences.map((exp, idx) => <Card key={idx} className="p-6 md:p-8 shadow-lg rounded-2xl border-2 border-primary/40 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:border-primary">
-                  <div className="flex flex-col gap-6">
+              {experiences.map((exp, idx) => <Card key={idx} className="relative p-6 md:p-8 shadow-lg rounded-2xl border-2 border-primary/40 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:border-primary">
+                  <a
+                    href={exp.verifyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-4 right-4 md:top-6 md:right-6"
+                  >
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2 border-primary/40 hover:border-primary hover:bg-primary/10"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Verify
+                    </Button>
+                  </a>
+                  <div className="flex flex-col gap-6 pr-20 md:pr-24">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                       <h3 className="text-xl md:text-2xl font-semibold">{exp.title}</h3>
                       <Badge className={getBadgeColor(exp.type)}>{exp.type}</Badge>
