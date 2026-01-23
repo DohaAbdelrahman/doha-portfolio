@@ -49,10 +49,11 @@ export const Hero = () => {
                 />
               </h1>
 
-              <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Turning data into insights with machine learning, analytics, and 
-                visualizations, I deliver impactful solutions that simplify 
-                complexity.
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
+                <span className="block font-bold text-xl sm:text-2xl">Hi, my name is Doha Abdelrahman,</span>
+                <span className="block text-sm sm:text-base font-bold">
+                   A Data Scientist and ML Engineer with a strong passion for solving real-world problems through data and AI.
+                </span>
               </p>
             </div>
 
