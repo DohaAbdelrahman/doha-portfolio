@@ -51,7 +51,7 @@ export const Hero = () => {
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
                 <span className="block font-bold text-xl sm:text-2xl">Hi, my name is Doha Abdelrahman,</span>
-                <span className="block text-sm sm:text-base font-bold">
+                <span className="block text-sm sm:text-base font-semibold">
                    A Data Scientist and ML Engineer with a strong passion for solving real-world problems through data and AI.
                 </span>
               </p>
