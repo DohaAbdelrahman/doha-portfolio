@@ -76,12 +76,9 @@ export const Certifications = () => {
               {/* Skills */}
               <div className="mb-4">
                 <div className="flex flex-wrap gap-1">
-                  {cert.skills.slice(0, 4).map((skill, skillIndex) => <span key={skillIndex} className="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full font-medium">
+                  {cert.skills.map((skill, skillIndex) => <span key={skillIndex} className="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full font-medium">
                       {skill}
                     </span>)}
-                  {cert.skills.length > 4 && <span className="px-2 py-0.5 bg-primary/10 text-primary/70 text-xs rounded-full">
-                      +{cert.skills.length - 4} more
-                    </span>}
                 </div>
               </div>
 
