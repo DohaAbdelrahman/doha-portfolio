@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, Award } from "lucide-react";
-
 export const Certifications = () => {
   const certifications = [{
     title: "Google Data Analysts Scholarship",
@@ -33,9 +32,7 @@ export const Certifications = () => {
     verifyUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link",
     embedUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/preview"
   }];
-
-  return (
-    <section id="certifications" className="py-20">
+  return <section id="certifications" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="font-bold mb-4 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-700 bg-clip-text text-primary py-[10px] text-5xl">
@@ -44,19 +41,10 @@ export const Certifications = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
-            <Card
-              key={cert.title}
-              className="p-6 bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary flex flex-col"
-            >
+          {certifications.map((cert, index) => <Card key={cert.title} className="p-6 bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary flex flex-col">
               {/* Certificate Preview */}
               <div className="w-full h-48 mb-4 rounded-lg overflow-hidden border border-primary/20 bg-muted/50">
-                <iframe
-                  src={cert.embedUrl}
-                  className="w-full h-full"
-                  allow="autoplay"
-                  title={`${cert.title} Certificate`}
-                />
+                <iframe src={cert.embedUrl} className="w-full h-full" allow="autoplay" title={`${cert.title} Certificate`} />
               </div>
 
               {/* Status Badge */}
@@ -77,34 +65,23 @@ export const Certifications = () => {
               <h3 className="text-lg font-bold mb-1 bg-hero-gradient bg-clip-text text-transparent line-clamp-2">
                 {cert.title}
               </h3>
-              <p className="text-sm font-semibold text-primary-glow mb-2">{cert.issuer}</p>
+              <p className="text-primary-glow mb-2 text-lg font-bold">{cert.issuer}</p>
               
-              {cert.credentialId && (
-                <p className="text-xs text-muted-foreground mb-2">
+              {cert.credentialId && <p className="text-xs text-muted-foreground mb-2">
                   ID: {cert.credentialId}
-                </p>
-              )}
+                </p>}
 
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-grow">
-                {cert.description}
-              </p>
+              
 
               {/* Skills */}
               <div className="mb-4">
                 <div className="flex flex-wrap gap-1">
-                  {cert.skills.slice(0, 4).map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full font-medium"
-                    >
+                  {cert.skills.slice(0, 4).map((skill, skillIndex) => <span key={skillIndex} className="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full font-medium">
                       {skill}
-                    </span>
-                  ))}
-                  {cert.skills.length > 4 && (
-                    <span className="px-2 py-0.5 bg-primary/10 text-primary/70 text-xs rounded-full">
+                    </span>)}
+                  {cert.skills.length > 4 && <span className="px-2 py-0.5 bg-primary/10 text-primary/70 text-xs rounded-full">
                       +{cert.skills.length - 4} more
-                    </span>
-                  )}
+                    </span>}
                 </div>
               </div>
 
@@ -115,10 +92,8 @@ export const Certifications = () => {
                   Verify Certificate
                 </a>
               </Button>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
