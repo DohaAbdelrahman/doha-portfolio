@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { TypewriterText } from "./TypewriterText";
-
 export const Hero = () => {
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Floating geometric elements */}
@@ -32,21 +31,14 @@ export const Hero = () => {
               <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
                 Data Scientist
               </span>
-              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
+              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold mx-[10px]">
                 ML Engineer
               </span>
             </div>
             
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight whitespace-nowrap">
-                <TypewriterText
-                  text="Doha Abdelrahman"
-                  typingSpeed={100}
-                  deletingSpeed={60}
-                  pauseAfterTyping={2000}
-                  pauseAfterDeleting={800}
-                  className="bg-gradient-text bg-clip-text text-transparent"
-                />
+                <TypewriterText text="Doha Abdelrahman" typingSpeed={100} deletingSpeed={60} pauseAfterTyping={2000} pauseAfterDeleting={800} className="bg-gradient-text bg-clip-text text-transparent" />
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
