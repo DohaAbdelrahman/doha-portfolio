@@ -89,8 +89,8 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Profile Image - Fixed position container */}
-          <div className="flex justify-center lg:justify-center order-1 lg:order-2 animate-slide-up flex-shrink-0" style={{
+          {/* Profile Image - Fixed position container with top padding on mobile to avoid nav overlap */}
+          <div className="flex justify-center lg:justify-center order-1 lg:order-2 animate-slide-up flex-shrink-0 pt-16 sm:pt-8 lg:pt-0" style={{
           animationDelay: '0.2s'
         }}>
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
