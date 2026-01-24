@@ -1,47 +1,55 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Programming Languages",
-      skills: [
-        { name: "Python", level: 95 },
-        { name: "Java", level: 75 },
-        { name: "C++", level: 70 },
-        { name: "JavaScript", level: 80 }
-      ]
-    },
-    {
-      title: "Data Analysis",
-      skills: [
-        { name: "SQL", level: 85 },
-        { name: "Excel", level: 95 },
-        { name: "Power BI", level: 85 },
-        { name: "Statistical Analysis", level: 80 }
-      ]
-    },
-    {
-      title: "Web Technologies",
-      skills: [
-        { name: "HTML/CSS", level: 85 },
-        { name: "Data Visualization", level: 82 },
-        { name: "Machine Learning", level: 75 },
-        { name: "Business Intelligence", level: 80 }
-      ]
-    }
-  ];
-
-  const technologies = [
-    "Python", "Java", "C++", "HTML/CSS", "JavaScript", "SQL", 
-    "Microsoft Excel", "PowerPoint", "Power BI", "Word", "Data Analysis", 
-    "Statistical Analysis", "Data Visualization", "Machine Learning",
-    "Business Intelligence", "Data Cleaning"
-  ];
-
-  return (
-    <section id="skills" className="py-20 px-6 bg-gradient-hero">
+  const skillCategories = [{
+    title: "Programming Languages",
+    skills: [{
+      name: "Python",
+      level: 95
+    }, {
+      name: "Java",
+      level: 75
+    }, {
+      name: "C++",
+      level: 70
+    }, {
+      name: "JavaScript",
+      level: 80
+    }]
+  }, {
+    title: "Data Analysis",
+    skills: [{
+      name: "SQL",
+      level: 85
+    }, {
+      name: "Excel",
+      level: 95
+    }, {
+      name: "Power BI",
+      level: 85
+    }, {
+      name: "Statistical Analysis",
+      level: 80
+    }]
+  }, {
+    title: "Web Technologies",
+    skills: [{
+      name: "HTML/CSS",
+      level: 85
+    }, {
+      name: "Data Visualization",
+      level: 82
+    }, {
+      name: "Machine Learning",
+      level: 75
+    }, {
+      name: "Business Intelligence",
+      level: 80
+    }]
+  }];
+  const technologies = ["Python", "Java", "C++", "HTML/CSS", "JavaScript", "SQL", "Microsoft Excel", "PowerPoint", "Power BI", "Word", "Data Analysis", "Statistical Analysis", "Data Visualization", "Machine Learning", "Business Intelligence", "Data Cleaning"];
+  return <section id="skills" className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
@@ -54,34 +62,24 @@ const Skills = () => {
 
         {/* Skill Progress Bars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {skillCategories.map((category, categoryIndex) => (
-            <Card 
-              key={category.title} 
-              className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
-            >
+          {skillCategories.map((category, categoryIndex) => <Card key={category.title} className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary animate-slide-up" style={{
+          animationDelay: `${categoryIndex * 0.1}s`
+        }}>
               <CardHeader>
-                <CardTitle className="text-primary">{category.title}</CardTitle>
+                <CardTitle className="text-primary font-bold text-center">{category.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
+                {category.skills.map((skill, skillIndex) => <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium">{skill.name}</span>
                       <span className="text-sm text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <Progress 
-                      value={skill.level} 
-                      className="h-2"
-                      style={{ 
-                        animationDelay: `${(categoryIndex * 4 + skillIndex) * 0.1}s` 
-                      }}
-                    />
-                  </div>
-                ))}
+                    <Progress value={skill.level} className="h-2" style={{
+                animationDelay: `${(categoryIndex * 4 + skillIndex) * 0.1}s`
+              }} />
+                  </div>)}
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Technology Tags */}
@@ -91,22 +89,15 @@ const Skills = () => {
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-3 justify-center">
-              {technologies.map((tech, index) => (
-                <Badge 
-                  key={tech} 
-                  variant="secondary" 
-                  className="bg-secondary/50 hover:bg-primary/20 hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 animate-fade-in cursor-default"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
+              {technologies.map((tech, index) => <Badge key={tech} variant="secondary" className="bg-secondary/50 hover:bg-primary/20 hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 animate-fade-in cursor-default" style={{
+              animationDelay: `${index * 0.05}s`
+            }}>
                   {tech}
-                </Badge>
-              ))}
+                </Badge>)}
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Skills;
