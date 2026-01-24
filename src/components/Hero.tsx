@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, FileText } from "lucide-react";
 import { TypewriterText } from "./TypewriterText";
+
+// Kaggle icon component
+const KaggleIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.28.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.076.312z"/>
+  </svg>
+);
+
 export const Hero = () => {
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Floating geometric elements */}
@@ -27,39 +35,41 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-6 sm:space-y-8 animate-slide-up order-2 lg:order-1">
-            <div className="inline-block">
+            {/* 1. Green rectangle - Role badges centered on mobile */}
+            <div className="flex justify-center lg:justify-start gap-2 sm:gap-3">
               <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
                 Data Scientist
               </span>
-              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold mx-[10px]">
+              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
                 ML Engineer
               </span>
             </div>
             
             <div className="space-y-6">
-              {/* Fixed height container to prevent layout shift from typewriter */}
-              <div className="h-[60px] sm:h-[70px] lg:h-[90px] flex items-center">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+              {/* 2. Yellow rectangle - Typewriter name centered on mobile */}
+              <div className="h-[60px] sm:h-[70px] lg:h-[90px] flex items-center justify-center lg:justify-start">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-center lg:text-left">
                   <TypewriterText text="Doha Abdelrahman" typingSpeed={100} deletingSpeed={60} pauseAfterTyping={2000} pauseAfterDeleting={800} className="bg-gradient-text bg-clip-text text-transparent" />
                 </h1>
               </div>
 
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
-                <span className="block font-bold text-xl sm:text-2xl">Hi, my name is Doha Abdelrahman,</span>
+              {/* 3. Purple rectangle - Text centered on mobile, one line for intro */}
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0 text-center lg:text-left">
+                <span className="block font-bold text-base sm:text-xl lg:text-2xl whitespace-nowrap">Hi, my name is Doha Abdelrahman,</span>
                 <span className="block text-sm sm:text-base font-semibold">
                    A Data Scientist and ML Engineer with a strong passion for solving real-world problems through data and AI.
                 </span>
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            {/* 4. Red rectangle - Buttons side by side and centered on mobile, no emoji on Download CV */}
+            <div className="flex flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300 text-base font-semibold">
                 <Mail className="w-5 h-5 mr-2" />
                 Get In Touch
               </Button>
               <Button variant="outline" className="border-primary/30 hover:bg-primary/10 text-base font-semibold" onClick={() => {
-              // You can replace this URL with your actual CV file
-              const cvUrl = "https://drive.google.com/file/d/1DY-qZXrARUREa2j51NQTWUM9DxSbmrzV/view?usp=drive_link"; // Update this with your CV file path
+              const cvUrl = "https://drive.google.com/file/d/1DY-qZXrARUREa2j51NQTWUM9DxSbmrzV/view?usp=drive_link";
               const link = document.createElement('a');
               link.href = cvUrl;
               link.download = 'Doha_Abdelrahman_CV.pdf';
@@ -67,13 +77,13 @@ export const Hero = () => {
               link.click();
               document.body.removeChild(link);
             }}>
-                <span className="mr-2">📄</span>
+                <FileText className="w-5 h-5 mr-2" />
                 Download CV
               </Button>
             </div>
 
-            {/* Social Links */}
-            <div className="gap-4 pt-4 flex items-start justify-start">
+            {/* 6. Orange rectangle - Social Links centered on mobile with Kaggle */}
+            <div className="gap-4 pt-4 flex items-center justify-center lg:justify-start">
               <a href="https://github.com/DohaAbdelrahman" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
@@ -82,6 +92,9 @@ export const Hero = () => {
               </a>
               <a href="mailto:dohaabd757@gmail.com" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://www.kaggle.com/dohaabdelrahman" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+                <KaggleIcon />
               </a>
               <a href="tel:+201029474155" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -109,12 +122,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
+        {/* 5. Dark blue arrow - Scroll indicator (mouse shape) REMOVED */}
       </div>
     </section>;
 };
