@@ -23,10 +23,10 @@ export const Hero = () => {
       }}></div>
       </div>
 
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-6 sm:space-y-8 animate-slide-up order-2 lg:order-1">
             <div className="inline-block">
               <span className="px-4 py-2 bg-primary/20 text-primary rounded-full border border-primary/30 text-lg font-sans font-bold">
                 Data Scientist
@@ -36,10 +36,13 @@ export const Hero = () => {
               </span>
             </div>
             
-            <div className="space-y-6 text-6xl">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight whitespace-nowrap">
-                <TypewriterText text="Doha Abdelrahman" typingSpeed={100} deletingSpeed={60} pauseAfterTyping={2000} pauseAfterDeleting={800} className="bg-gradient-text bg-clip-text text-transparent" />
-              </h1>
+            <div className="space-y-6">
+              {/* Fixed height container to prevent layout shift from typewriter */}
+              <div className="h-[60px] sm:h-[70px] lg:h-[90px] flex items-center">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                  <TypewriterText text="Doha Abdelrahman" typingSpeed={100} deletingSpeed={60} pauseAfterTyping={2000} pauseAfterDeleting={800} className="bg-gradient-text bg-clip-text text-transparent" />
+                </h1>
+              </div>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
                 <span className="block font-bold text-xl sm:text-2xl">Hi, my name is Doha Abdelrahman,</span>
@@ -86,20 +89,20 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Profile Image */}
-          <div className="justify-center animate-slide-up flex-row flex items-center lg:justify-center" style={{
+          {/* Profile Image - Fixed position container */}
+          <div className="flex justify-center lg:justify-center order-1 lg:order-2 animate-slide-up flex-shrink-0" style={{
           animationDelay: '0.2s'
         }}>
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-primary p-1 animate-glow">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+              <div className="w-full h-full rounded-full bg-gradient-primary p-1 animate-glow">
                 <img src="/lovable-uploads/121f87dd-0ca8-40da-96e8-2f5fb7ca5fe7.png" alt="Doha Abdelrahman - Data Scientist" className="w-full h-full rounded-full object-cover" />
               </div>
               {/* Floating elements around image */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-lg animate-float opacity-80"></div>
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-primary-glow rounded-lg animate-float opacity-60" style={{
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-lg animate-float opacity-80"></div>
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-4 h-4 sm:w-6 sm:h-6 bg-primary-glow rounded-lg animate-float opacity-60" style={{
               animationDelay: '1.5s'
             }}></div>
-              <div className="absolute top-8 -left-8 w-4 h-4 bg-primary rounded-full animate-float opacity-70" style={{
+              <div className="absolute top-6 -left-6 sm:top-8 sm:-left-8 w-3 h-3 sm:w-4 sm:h-4 bg-primary rounded-full animate-float opacity-70" style={{
               animationDelay: '2.5s'
             }}></div>
             </div>
