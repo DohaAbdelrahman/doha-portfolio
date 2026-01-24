@@ -36,7 +36,7 @@ export const Hero = () => {
               </span>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 text-6xl">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight whitespace-nowrap">
                 <TypewriterText text="Doha Abdelrahman" typingSpeed={100} deletingSpeed={60} pauseAfterTyping={2000} pauseAfterDeleting={800} className="bg-gradient-text bg-clip-text text-transparent" />
               </h1>
