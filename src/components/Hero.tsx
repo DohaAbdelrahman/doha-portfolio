@@ -64,10 +64,11 @@ export const Hero = () => {
 
             {/* 4. Red rectangle - Buttons side by side and centered on mobile, no emoji on Download CV */}
             <div className="flex flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300 text-base font-semibold">
-                <Mail className="w-5 h-5 mr-2" />
-                Get In Touch
-              </Button>
+              <a href="#projects" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto shadow-glow transition-all duration-300 hover:scale-105 text-sm sm:text-base px-6 sm:px-8 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white">
+                  View My Work
+                </Button>
+              </a>
               <Button variant="outline" className="border-primary/30 hover:bg-primary/10 text-base font-semibold" onClick={() => {
               const cvUrl = "https://drive.google.com/file/d/1DY-qZXrARUREa2j51NQTWUM9DxSbmrzV/view?usp=drive_link";
               const link = document.createElement('a');
