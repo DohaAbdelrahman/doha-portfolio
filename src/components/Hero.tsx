@@ -70,7 +70,7 @@ export const Hero = () => {
                 </Button>
               </a>
               <Button variant="outline" className="border-primary/30 hover:bg-primary/10 text-base font-semibold" onClick={() => {
-              const cvUrl = "https://drive.google.com/file/d/1wRqMd4AVzrC1xSKBJpHl-6r1KJe836d_/view?usp=drive_link://drive.google.com/file/d/1DY-qZXrARUREa2j51NQTWUM9DxSbmrzV/view?usp=drive_link";
+              const cvUrl = "https://drive.google.com/file/d/1wRqMd4AVzrC1xSKBJpHl-6r1KJe836d_/view?usp=sharing";
               const link = document.createElement('a');
               link.href = cvUrl;
               link.download = 'Doha_Abdelrahman_CV.pdf';
