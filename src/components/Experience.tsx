@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 
 const Experience = () => {
   const experiences = [{
-    title: ".Net Development Scholarship",
+    title: ".Net Development Summer Training",
     company: "ITI - Information Technology Institute",
     location: "Giza, Egypt",
     period: "August 2025 - Sept 2025",
