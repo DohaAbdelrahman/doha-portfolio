@@ -18,16 +18,16 @@ export const Certifications = () => {
     status: "Active",
     year: "2025",
     skills: ["Python", "Scikit-learnn", "Machine Learning Algorithm", "NLP", "Neural Networks", "Deep Learning"],
-    verifyUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/view?usp=sharing",
-    embedUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/preview"
+    verifyUrl: "https://drive.google.com/file/d/1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM/view?usp=sharing",
+    embedUrl: "https://drive.google.com/file/d/1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM/preview"
   }, {
     title: "Professional Foundations Training",
     issuer: "ALX Africa",
     status: "Active",
     year: "2025",
-    skills: ["teamwork", "communication", "Engage in practical projects", "Learn management and innovation", "Problem Solving ", "Critical Thinking"],
-    verifyUrl: "https://drive.google.com/file/d/1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM/view?usp=sharing",
-    embedUrl: "https://drive.google.com/file/d/1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM/preview"
+    skills: ["Teamwork", "communication", "Engage in practical projects", "Learn management and innovation", "Problem Solving ", "Critical Thinking"],
+    verifyUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/view?usp=sharing",
+    embedUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/preview"
   }, {
     title: "Machine Learning - Summer Training",
     issuer: "NTI - National Telecommunication Institute",
