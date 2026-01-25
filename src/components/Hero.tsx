@@ -80,7 +80,7 @@ export const Hero = () => {
               window.open(cvUrl, "_blank"); // ده هيفتح اللينك في تبويب جديد
             }}>
                 <FileText className="w-5 h-5 mr-2" />
-                View CV
+                Download CV
               </Button>
             </div>
 
