@@ -16,6 +16,17 @@ const Experience = () => {
     achievements: ["Developed and deployed web and desktop applications using C# and ASP.NET", "Designed and implemented database-driven applications with SQL Server", "Collaborated in a team environment to build full-stack projects", "Gained strong understanding of software design patterns and best coding practices"],
     verifyLink: "#"
   }, {
+    title: "Machine Learning Summer Training",
+    company: "NTI - National Technology Institute",
+    location: "Giza, Egypt",
+    period: "August 2025 - Sept 2025",
+    type: "Remote",
+    description: "Completed a one-month hands-on training covering core ML algorithms, data preprocessing, model evaluation, and real-world applications using Python (Scikit-learn, Pandas, Matplotlib).",
+    technologies: ["Machine Learning", "Python", "Scikit-Learn"],
+    achievements: ["Developed and implemented ML models (Linear Regression, Logistic Regression, Decision Trees) on real datasets to solve predictive problems.","Applied data preprocessing techniques including data cleaning, normalization, and feature engineering.", "Completed a mini-project predicting [example: customer behavior / sales trends / stock prices] and presented results with clear visualizations.", "Gained hands-on experience in handling real-world datasets and understanding the end-to-end ML"],
+    verifyLink: "#"
+
+  },{
     title: "AI Scholarship",
     company: "NTI - National Telecommunication Institute",
     location: "Giza, Egypt",
