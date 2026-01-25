@@ -71,12 +71,13 @@ export const Hero = () => {
               </a>
               <Button variant="outline" className="border-primary/30 hover:bg-primary/10 text-base font-semibold" onClick={() => {
               const cvUrl =  "https://drive.google.com/uc?export=download&id=1wRqMd4AVzrC1xSKBJpHl-6r1KJe836d_";
-              const link = document.createElement('a');
-              link.href = cvUrl;
-              link.download = 'Doha_Abdelrahman_CV.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
+             // const link = document.createElement('a');
+              //link.href = cvUrl;
+              //link.download = 'Doha_Abdelrahman_CV.pdf';
+              //document.body.appendChild(link);
+              //link.click();
+              //document.body.removeChild(link);
+              window.open(cvUrl, "_blank"); // ده هيفتح اللينك في تبويب جديد
             }}>
                 <FileText className="w-5 h-5 mr-2" />
                 Download CV
