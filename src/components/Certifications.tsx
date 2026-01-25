@@ -12,12 +12,29 @@ export const Certifications = () => {
     skills: ["Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
     verifyUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link",
     embedUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/preview"
+  },{
+    title: "Professional Foundations Training",
+    issuer: "ALX Africa",
+    status: "Active",
+    year: "2025",
+    skills: ["teamwork", "communication", "Engage in practical projects", "Learn management and innovation", "Problem Solving ", "Critical Thinking"],
+    verifyUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/view?usp=sharing",
+    embedUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/preview"
   }, {
+    title: "Machine Learning - Summer Training",
+    issuer: "NTI - National Telecommunication Institute",
+    status: "Active",
+    year: "2025",
+    skills: ["Python", "Scikit-learn", "Machine Learning", "Neural Networks", "Deep Learning ", "CNNs"],
+    verifyUrl: "https://drive.google.com/file/d/1QeVX0XXUeO7ndyQS5eo3fqFfySLbAssD/view?usp=sharing",
+    embedUrl: "https://drive.google.com/file/d/1QeVX0XXUeO7ndyQS5eo3fqFfySLbAssD/preview"
+  
+  } ,{
     title: "Huawei ICT Academy – Artificial Intelligence Scholarship",
     issuer: "Huawei ICT Academy-Egypt",
     status: "Active",
     year: "2025",
-    credentialId: "HCIA-AI V4.0",
+    credentialId: "ICT20250816000531",
     description: "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
     skills: ["Data Analysis", "Machine Learning", "Python", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"],
     verifyUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link",
