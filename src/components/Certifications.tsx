@@ -68,12 +68,8 @@ export const Certifications = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => <Card key={cert.title} className="p-6 bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary flex flex-col">
               {/* Certificate Preview */}
-              <div className="w-full h-48 mb-4 rounded-lg overflow-hidden border border-primary/20 bg-muted/50">
-                <img 
-                  src={cert.embedUrl} 
-                  alt={`${cert.title} Certificate`}
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-64 rounded-lg overflow-hidden border border-border/30 bg-muted/20">
+                <img src={cert.embedUrl} alt={`${cert.title} certificate`} className="w-full h-full object-contain" loading="lazy" />
               </div>
 
               {/* Status Badge */}
