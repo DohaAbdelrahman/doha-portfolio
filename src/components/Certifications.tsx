@@ -11,7 +11,7 @@ export const Certifications = () => {
     description: "The DEPI scholarship is a program from Egypt's Ministry of Communications that helps students and graduates get ready for tech jobs, especially in areas like Data Science.",
     skills: ["Excel", "Python", "Data Analysis", "SQL", "Tableau", "Power BI", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization", "Machine Learning"],
     verifyUrl: "https://drive.google.com/file/d/1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD/view?usp=drive_link",
-    embedUrl: "https://drive.google.com/thumbnail?id=1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD&sz=w2000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1jcC5HyN3MtiE6JEf8LtSp32C9mMBH5UD"
   },{
     title: "Artificial Intelligence",
     issuer: "National Telecommunication Institute & Huawei",
@@ -19,7 +19,7 @@ export const Certifications = () => {
     year: "2025",
     skills: ["Python", "Scikit-learnn", "Machine Learning Algorithm", "NLP", "Neural Networks", "Deep Learning"],
     verifyUrl: "https://drive.google.com/file/d/1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM/view?usp=sharing",
-    embedUrl: "https://drive.google.com/thumbnail?id=1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM&sz=w2000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1qS3vnxXfzcNN3H4LUHhMmZMdDFXWuHnM"
   }, {
     title: "Professional Foundations Training",
     issuer: "ALX Africa",
@@ -27,7 +27,7 @@ export const Certifications = () => {
     year: "2025",
     skills: ["Teamwork", "communication", "Engage in practical projects", "Learn management and innovation", "Problem Solving ", "Critical Thinking"],
     verifyUrl: "https://drive.google.com/file/d/1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y/view?usp=sharing",
-    embedUrl: "https://drive.google.com/thumbnail?id=1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y&sz=w2000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1K5AnDxJEwFDRu4M8y8s9LbO0ibfvtj1y"
   }, {
     title: "Machine Learning - Summer Training",
     issuer: "NTI - National Telecommunication Institute",
@@ -35,7 +35,7 @@ export const Certifications = () => {
     year: "2025",
     skills: ["Python", "Scikit-learn", "Machine Learning", "Neural Networks", "Deep Learning ", "CNNs"],
     verifyUrl: "https://drive.google.com/file/d/1QeVX0XXUeO7ndyQS5eo3fqFfySLbAssD/view?usp=sharing",
-    embedUrl: "https://drive.google.com/thumbnail?id=1QeVX0XXUeO7ndyQS5eo3fqFfySLbAssD&sz=w2000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1QeVX0XXUeO7ndyQS5eo3fqFfySLbAssD"
   
   } ,{
     title: "Huawei ICT Academy – Artificial Intelligence Scholarship",
@@ -46,7 +46,7 @@ export const Certifications = () => {
     description: "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
     skills: ["Data Analysis", "Machine Learning", "Python", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"],
     verifyUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link",
-    embedUrl: "https://drive.google.com/thumbnail?id=1EqDnMZV-IQoJx8USInegDpQd94jB6lCH&sz=w1000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1EqDnMZV-IQoJx8USInegDpQd94jB6lCH"
   }, {
     title: "Certificate in Teaching Business English",
     issuer: "Berlitz Egypt",
@@ -55,7 +55,7 @@ export const Certifications = () => {
     description: "This training enhanced both my language proficiency and my ability to communicate effectively in a professional environment.",
     skills: ["Business English Communication", "Professional Writing", "Presentation Skills"],
     verifyUrl: "https://drive.google.com/file/d/1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz/view?usp=drive_link",
-    embedUrl: "https://drive.google.com/thumbnail?id=1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz&sz=w2000"
+    embedUrl: "https://drive.google.com/uc?export=view&id=1vmYaZ3C_ymf47Cs5tA_2lC3ryoKTi6nz"
   }];
   return <section id="certifications" className="py-20">
       <div className="container mx-auto px-6">
