@@ -46,7 +46,7 @@ export const Certifications = () => {
     description: "Successfully completed the ETA Scholarship training program delivered by the National Telecommunication Institute (NTI) in collaboration with Huawei ICT Academy – Egypt.",
     skills: ["Data Analysis", "Machine Learning", "Python", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"],
     verifyUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/view?usp=drive_link",
-    embedUrl: "https://drive.google.com/file/d/1EqDnMZV-IQoJx8USInegDpQd94jB6lCH/preview"
+    embedUrl: "https://drive.google.com/thumbnail?id=1EqDnMZV-IQoJx8USInegDpQd94jB6lCH&sz=w1000"
   }, {
     title: "Certificate in Teaching Business English",
     issuer: "Berlitz Egypt",
