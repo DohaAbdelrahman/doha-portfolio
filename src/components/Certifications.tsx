@@ -72,7 +72,7 @@ export const Certifications = () => {
                 <img 
                   src={cert.embedUrl} 
                   alt={`${cert.title} Certificate`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
