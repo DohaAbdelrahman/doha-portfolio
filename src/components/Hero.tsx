@@ -92,7 +92,7 @@ export const Hero = () => {
               <a href="https://www.linkedin.com/in/doha-abdelrahman-3540292a5" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="mailto:dohaabd757@gmail.com" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
+              <a href="mailto:dohaabdo757@gmail.com" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a href="https://www.kaggle.com/dohaabdelrahman" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow-primary group">
